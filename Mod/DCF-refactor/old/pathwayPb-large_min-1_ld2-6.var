@@ -1,0 +1,6 @@
+%Sol source: pathwayPb-large
+%Variant name: min-1_ld2-6
+
+solSource(pathwayPb-large).
+pf([m_suc6p, -m_suc6p, m_acac, -m_acac, m_but, -m_but, m_arbt6p, -m_arbt6p, m_hqn, -m_hqn, m_galctn_D, -m_galctn_D, m_f1p, -m_f1p, m_galct_D, -m_galct_D, m_2pglyc, -m_2pglyc, m_pppn, -m_pppn, m_cinnm, -m_cinnm, m_lcts, -m_lcts, m_melib, -m_melib, m_3hcinnm, -m_3hcinnm, m_3hpppn, -m_3hpppn, m_acnam, -m_acnam, m_tre, -m_tre, m_phaccoa, -m_phaccoa, m_rib_D, -m_rib_D, m_3dgulnp, -m_3dgulnp, m_taur, -m_taur, m_aacald, -m_aacald, m_tartr_L, -m_tartr_L, m_peamn, -m_peamn, m_glcr, -m_glcr, m_23doguln, -m_23doguln]<=2).
+depthLimit(6).

@@ -1,0 +1,6 @@
+%Sol source: COM003-2.C1i2
+%Variant name: all_ld-1--1
+
+solSource(COM003-2.C1i2).
+pf([-algorithm_program_decides(_0)]).
+depthLimit(-1).

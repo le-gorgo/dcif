@@ -1,0 +1,6 @@
+%Sol source: PUZ029-1.C2i1
+%Variant name: min-5_ld5--1
+
+solSource(PUZ029-1.C2i1).
+pf([-eats_pennybuns(_0), -eats_pennybuns(_0)] <= 5).
+depthLimit(-1).

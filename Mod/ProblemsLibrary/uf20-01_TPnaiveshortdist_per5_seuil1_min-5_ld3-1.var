@@ -1,0 +1,6 @@
+%Sol source: uf20-01_TPnaiveshortdist_per5_seuil1
+%Variant name: min-5_ld3-1
+
+solSource(uf20-01_TPnaiveshortdist_per5_seuil1).
+pf([+p4, -p4, +p18, -p18] <= 3).
+depthLimit(1).

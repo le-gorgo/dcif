@@ -1,0 +1,6 @@
+%Sol source: COM003-2.C2i1
+%Variant name: all_ld-1--1
+
+solSource(COM003-2.C2i1).
+pf([+algorithm_program_decides(_0), -program_program_decides(_0), +program_program_decides(_0), -program_halts2_halts3_outputs(_0,_1,_2,_3), -program_not_halts2_halts3_outputs(_0,_1,_2,_3), +program(_0), +program_halts2_halts3_outputs(_0,_1,_2,_3), +program_not_halts2_halts3_outputs(_0,_1,_2,_3), -program(_0), -program_halts2_halts2_outputs(_0,_1,_2), -program_not_halts2_halts2_outputs(_0,_1,_2), +program_halts2_halts2_outputs(_0,_1,_2), +program_not_halts2_halts2_outputs(_0,_1,_2), +program_halts2(_0,_1), -halts2(_0,_1)]).
+depthLimit(-1).

@@ -1,0 +1,27 @@
+problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
+PUZ018-1.C2i1_all_ld-1--1;Mono;1;SOLAR-Inc;0;2;105;88;2;14;0;0;0;0;88;2;14;0;0;0;0;88;2;14;0;0;0;0;88;2;14;0;0;0;0
+PUZ018-1.C2i1_all_ld-1--1;Mono;1;Solar-Carc;0;2;89;78;2;14;0;0;0;0;78;2;14;0;0;0;0;78;2;14;0;0;0;0;78;2;14;0;0;0;0
+PUZ018-1.C2i1_all_ld-1--1;Mono;1;Solar;0;2;76;68;2;14;0;0;0;0;68;2;14;0;0;0;0;68;2;14;0;0;0;0;68;2;14;0;0;0;0
+PUZ018-1.C2i1_all_ld-1--1;Mono;1;SOLAR-Inc;0;2;149;87;2;14;0;0;0;0;87;2;14;0;0;0;0;87;2;14;0;0;0;0;87;2;14;0;0;0;0
+PUZ018-1.C2i1_all_ld-1--1;Mono;1;Solar-Carc;0;2;99;88;2;14;0;0;0;0;88;2;14;0;0;0;0;88;2;14;0;0;0;0;88;2;14;0;0;0;0
+PUZ018-1.C2i1_all_ld-1--1;Mono;1;Solar;0;2;148;88;2;14;0;0;0;0;88;2;14;0;0;0;0;88;2;14;0;0;0;0;88;2;14;0;0;0;0
+PUZ018-1.C2i1_all_ld-1--1;Mono;1;SOLAR-Inc;0;2;149;87;2;14;0;0;0;0;87;2;14;0;0;0;0;87;2;14;0;0;0;0;87;2;14;0;0;0;0
+PUZ018-1.C2i1_all_ld-1--1;Mono;1;Solar-Carc;0;2;156;96;2;14;0;0;0;0;96;2;14;0;0;0;0;96;2;14;0;0;0;0;96;2;14;0;0;0;0
+PUZ018-1.C2i1_all_ld-1--1;Mono;1;Solar;0;2;149;90;2;14;0;0;0;0;90;2;14;0;0;0;0;90;2;14;0;0;0;0;90;2;14;0;0;0;0
+PUZ018-1.C2i1_all_ld-1--1;Mono;1;SOLAR-Inc;0;2;152;89;2;14;0;0;0;0;89;2;14;0;0;0;0;89;2;14;0;0;0;0;89;2;14;0;0;0;0
+PUZ018-1.C2i1_all_ld-1--1;Mono;1;Solar-Carc;0;2;149;89;2;14;0;0;0;0;89;2;14;0;0;0;0;89;2;14;0;0;0;0;89;2;14;0;0;0;0
+PUZ018-1.C2i1_all_ld-1--1;Mono;1;Solar;0;2;149;90;2;14;0;0;0;0;90;2;14;0;0;0;0;90;2;14;0;0;0;0;90;2;14;0;0;0;0
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Star;0;2;2604;86;4;25;0;0;14;5;75;2;14;0;0;7;3;0;0;0;0;0;2;0;11;2;11;0;0;7;3
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-NewAsync;0;2;1242;79;2;14;0;0;5;2;79;2;14;0;0;2;2;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Star-FixedRoot-1;0;2;1220;75;2;14;0;0;12;2;75;2;14;0;0;6;2;0;0;0;0;0;2;0;0;0;0;0;0;2;0
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Star-FixedRoot-2;0;2;1300;77;4;25;0;0;14;5;73;2;14;0;0;7;3;0;0;0;0;0;2;0;0;0;0;0;0;2;0
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Star-FixedRoot-3;0;2;1214;76;4;25;0;0;14;5;73;2;14;0;0;7;3;0;0;0;0;0;2;0;0;0;0;0;0;2;0
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Token;0;2;1215;88;8;47;0;0;11;10;70;2;14;0;0;4;4;3;2;11;0;0;2;2;11;2;11;0;0;3;2
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Async;0;2;1211;71;2;14;0;0;5;2;71;2;14;0;0;2;2;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Token-FixedOrder-3-2-1-0;0;2;1308;92;8;47;0;0;16;11;74;2;14;0;0;5;4;3;2;11;0;0;3;2;11;2;11;0;0;3;3
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Token-FixedOrder-2-1-0-3;0;2;1249;88;8;47;0;0;15;11;69;2;14;0;0;5;4;3;2;11;0;0;3;2;12;2;11;0;0;3;3
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Token-FixedOrder-1-0-3-2;0;2;1229;88;8;47;0;0;14;11;69;2;14;0;0;5;4;3;2;11;0;0;3;2;12;2;11;0;0;3;3
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Token-FixedOrder-0-3-2-1;0;2;1220;96;8;47;0;0;17;11;77;2;14;0;0;5;4;3;2;11;0;0;4;2;12;2;11;0;0;4;3
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Token-FixedOrder-1-2-3-0;0;2;1285;93;8;47;0;0;10;10;74;2;14;0;0;4;4;3;2;11;0;0;2;2;12;2;11;0;0;2;2
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Token-FixedOrder-2-3-0-1;0;2;1206;90;8;47;0;0;13;10;72;2;14;0;0;4;4;3;2;11;0;0;3;2;11;2;11;0;0;3;2
+PUZ018-1.C2i1_all_ld-1--1;_agent4;4;DICF-PB-Token-FixedOrder-3-0-1-2;0;2;1223;89;8;47;0;0;12;10;71;2;14;0;0;4;4;3;2;11;0;0;2;2;11;2;11;0;0;3;2

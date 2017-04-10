@@ -1,0 +1,6 @@
+%Sol source: pathwayPb-large
+%Variant name: max-1_ld2-6
+
+solSource(pathwayPb-large).
+pf([m_g6p]<=1).
+depthLimit(6).

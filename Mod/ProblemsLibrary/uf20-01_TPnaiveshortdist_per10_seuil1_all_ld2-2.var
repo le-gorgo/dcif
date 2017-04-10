@@ -1,0 +1,6 @@
+%Sol source: uf20-01_TPnaiveshortdist_per10_seuil1
+%Variant name: all_ld2-2
+
+solSource(uf20-01_TPnaiveshortdist_per10_seuil1).
+pf([+p15, -p15, +p5, -p5, +p12, -p12, +p17, -p17] <= 2).
+depthLimit(2).

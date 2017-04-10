@@ -1,0 +1,22 @@
+problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
+PUZ008-1.C1i2_all_ld2--1;_kmet4;4;DICF-PB-NewAsync;0;1;1047;36;3;17;0;0;13;9;29;1;6;0;0;4;3;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld2--1;_kmet4;4;DICF-PB-NewAsync;0;1;1049;35;3;17;0;0;13;9;28;1;6;0;0;4;3;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld2--1;_kmet4;4;DICF-PB-Async;0;1;1052;32;3;17;0;0;13;9;26;1;6;0;0;4;3;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld2--1;_kmet4;4;DICF-PB-Async;0;0;1049;20;0;1;0;0;4;0;20;0;1;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld2--1;_kmet4;4;DICF-PB-Async;0;0;24052;26;0;1;0;0;4;0;26;0;1;0;0;1;0;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld2--1;_kmet4;4;DICF-PB-Async;0;1;1050;32;3;17;0;0;13;9;26;1;6;0;0;4;3;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld2--1;_kmet4;4;DICF-PB-Async;0;1;1047;33;3;17;0;0;13;9;28;1;6;0;0;4;3;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld2--1;_kmet4;4;DICF-PB-Async;0;1;1051;33;3;17;0;0;13;9;27;1;6;0;0;4;3;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld2--1;_kmet4;4;DICF-PB-Start;0;1;1049;34;3;17;0;0;13;9;27;1;6;0;0;4;3;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld-1--1;_kmet4;4;DICF-PB-Start;0;1;1052;30;3;17;0;0;13;9;25;1;6;0;0;4;3;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld-1--1;_kmet4;4;DICF-PB-Start;0;1;1050;34;3;17;0;0;13;9;27;1;6;0;0;4;3;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld-1--1;_kmet4;4;DICF-PB-Star;0;1;1052;34;4;21;0;0;18;7;27;1;6;0;0;9;4;1;1;4;0;0;3;1;1;1;4;0;0;9;4
+PUZ008-1.C1i2_all_ld-1--1;_kmet4;4;DICF-PB-Async;0;1;1051;31;3;17;0;0;13;9;27;1;6;0;0;4;3;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld-1--1;_kmet4;4;DICF-PB-Async;0;1;75059;44;3;17;0;0;13;9;32;1;6;0;0;4;3;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld-1--1;_kmet4;4;DICF-PB-Async;0;30;1053;132;97;369;0;0;70;234;56;49;194;0;0;25;90;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld-1--1;_kmet4;4;DICF-PB-NewAsync;0;30;1050;147;73;282;0;0;140;171;63;42;165;0;0;60;78;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld-1--1;_kmet4;4;DICF-PB-NewAsync;0;30;1050;138;69;268;0;0;131;159;60;41;161;0;0;57;75;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld-1--1;_kmet4;4;DICF-PB-NewAsync;0;25;1050;119;58;228;0;0;112;135;50;34;135;0;0;48;63;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld-1--1;_kmet4;4;DICF-PB-NewAsync;0;25;1051;117;58;229;0;0;112;135;49;33;131;0;0;45;60;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld-1--1;_kmet4;4;DICF-PB-NewAsync;0;6;1052;43;9;33;0;0;26;27;30;4;16;0;0;11;12;0;0;0;0;0;1;0;0;0;0;0;0;1;0
+PUZ008-1.C1i2_all_ld-1--1;_kmet4;4;DICF-PB-NewAsync;0;30;1046;145;70;272;0;0;134;162;57;42;165;0;0;60;78;0;0;0;0;0;1;0;0;0;0;0;0;1;0

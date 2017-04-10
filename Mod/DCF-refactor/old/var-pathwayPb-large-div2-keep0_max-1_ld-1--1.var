@@ -1,0 +1,6 @@
+%Sol source: var-pathwayPb-large-div2-keep0
+%Variant name: max-1_ld-1--1
+
+solSource(var-pathwayPb-large-div2-keep0).
+pf([m_adp, -m_adp, m_pi, -m_pi, m_h2o, -m_h2o, m_nad, -m_nad, m_ppi, -m_ppi, m_co2, -m_co2, m_nadp, -m_nadp, m_atp, -m_atp, m_glu_L, -m_glu_L, m_coa, -m_coa, m_akg, -m_akg, m_ACP, -m_ACP, m_g3p, -m_g3p, m_succ, -m_succ, m_asp_L, -m_asp_L, m_f6p, -m_f6p]).
+depthLimit(-1).

@@ -1,0 +1,6 @@
+%Sol source: var-pathwayPb-large-div32-keep0
+%Variant name: max-5_ld-1--1
+
+solSource(var-pathwayPb-large-div32-keep0).
+pf([m_h, -m_h, m_nadh, -m_nadh, c_23dhb_h_nadh, -c_23dhb_h_nadh, c_13dpg_h_nadh, -c_13dpg_h_nadh, c_h_nadh_tagur, -c_h_nadh_tagur, m_tagur, -m_tagur, c_h_nadh_ohpb, -c_h_nadh_ohpb, c_25drapp_for_h_ppi, -c_25drapp_for_h_ppi, c_h_pap_so3_trdox, -c_h_pap_so3_trdox]).
+depthLimit(-1).

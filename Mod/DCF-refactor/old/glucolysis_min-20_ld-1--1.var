@@ -1,0 +1,6 @@
+%Sol source: glucolysis
+%Variant name: min-20_ld2-6
+
+solSource(glucolysis).
+pf([r_d1d5d99d1_39, -r_d1d5d99d1_39, r_d1d1d99d8_40, -r_d1d1d99d8_40, m_formate, -m_formate, r_d1d1d99d8_41, -r_d1d1d99d8_41, r_d1d4d99d3_42, -r_d1d4d99d3_42, r_d1d4d99d3_43, -r_d1d4d99d3_43, r_d4d1d2d32_44, -r_d4d1d2d32_44, m_tmao, -m_tmao, r_d4d1d2d32_45, -r_d4d1d2d32_45, r_d1d5d99d1_38, -r_d1d5d99d1_38, r_d2d1d3d3_24, -r_d2d1d3d3_24, r_d2d1d3d3_25, -r_d2d1d3d3_25, r_d3d5d3d1_26, -r_d3d5d3d1_26, r_d3d5d3d1_28, -r_d3d5d3d1_28, r_d2d1d1d2_30, -r_d2d1d1d2_30, r_d2d1d1d2_31, -r_d2d1d1d2_31, r_d3d5d3d3_32, -r_d3d5d3d3_32, r_d3d5d3d3_33, -r_d3d5d3d3_33, r_d3d5d2d10_34, -r_d3d5d2d10_34, r_d3d5d2d10_35, -r_d3d5d2d10_35]).
+depthLimit(-1).

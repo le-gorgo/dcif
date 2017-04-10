@@ -1,0 +1,6 @@
+%Sol source: PUZ012-1.C2i1
+%Variant name: all_ld2-6
+
+solSource(PUZ012-1.C2i1).
+pf([-label(_0,_1), -contains(_0,_1)] <= 2).
+depthLimit(6).

@@ -1,0 +1,17 @@
+problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
+testPair_all_ld-1--1;Mono;1;Solar;0;1;68;62;15;43;0;0;0;0;62;15;43;0;0;0;0;62;15;43;0;0;0;0;62;15;43;0;0;0;0
+testPair_all_ld-1--1;Mono;1;Solar;0;3;213;98;36;125;0;0;0;0;98;36;125;0;0;0;0;98;36;125;0;0;0;0;98;36;125;0;0;0;0
+testPair_all_ld-1--1;Mono;1;Solar;0;1;879575;118;15;43;0;0;0;0;118;15;43;0;0;0;0;118;15;43;0;0;0;0;118;15;43;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;1;4650704;104;15;43;0;0;0;0;104;15;43;0;0;0;0;104;15;43;0;0;0;0;104;15;43;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;0;171050;73;5;9;0;0;0;0;73;5;9;0;0;0;0;73;5;9;0;0;0;0;73;5;9;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;0;102;90;36;125;0;0;0;0;90;36;125;0;0;0;0;90;36;125;0;0;0;0;90;36;125;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;0;176;56;5;9;0;0;0;0;56;5;9;0;0;0;0;56;5;9;0;0;0;0;56;5;9;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;3;206;102;36;125;0;0;0;0;102;36;125;0;0;0;0;102;36;125;0;0;0;0;102;36;125;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;3;96;90;36;125;0;0;0;0;90;36;125;0;0;0;0;90;36;125;0;0;0;0;90;36;125;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;3;99;93;36;125;0;0;0;0;93;36;125;0;0;0;0;93;36;125;0;0;0;0;93;36;125;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;3;93;88;36;125;0;0;0;0;88;36;125;0;0;0;0;88;36;125;0;0;0;0;88;36;125;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;3;167;96;36;125;0;0;0;0;96;36;125;0;0;0;0;96;36;125;0;0;0;0;96;36;125;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;3;133;100;36;125;0;0;0;0;100;36;125;0;0;0;0;100;36;125;0;0;0;0;100;36;125;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;2;224;101;36;125;0;0;0;0;101;36;125;0;0;0;0;101;36;125;0;0;0;0;101;36;125;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;3;140;102;36;125;0;0;0;0;102;36;125;0;0;0;0;102;36;125;0;0;0;0;102;36;125;0;0;0;0
+testPair_all_ld-1-2;Mono;1;Solar;0;3;99;85;36;125;0;0;0;0;85;36;125;0;0;0;0;85;36;125;0;0;0;0;85;36;125;0;0;0;0

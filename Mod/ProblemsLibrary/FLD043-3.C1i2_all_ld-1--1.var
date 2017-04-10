@@ -1,0 +1,6 @@
+%Sol source: FLD043-3.C1i2
+%Variant name: all_ld-1--1
+
+solSource(FLD043-3.C1i2).
+pf([-product(_0,_1,_2), +sum(_0,_1,_2)]).
+depthLimit(-1).

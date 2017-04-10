@@ -1,0 +1,6 @@
+%Sol source: RNG004-3.C1i2
+%Variant name: all_ld-1--1
+
+solSource(RNG004-3.C1i2).
+pf([+equalish(_0,_1)]).
+depthLimit(4).

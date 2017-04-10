@@ -1,0 +1,4 @@
+problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
+toy-pb1;_def;4;DICF-PB-Async;0;1;1196;62;34;128;0;0;24;20;47;13;48;0;0;8;7;0;3;10;0;0;3;2;47;10;38;0;0;6;5
+toy-pb1;_def;4;DICF-PB-Async;0;1;1421;78;34;128;0;0;24;20;47;13;48;0;0;8;7;0;3;10;0;0;3;2;47;10;38;0;0;6;5
+toy-pb1;_def;4;DICF-PB-Async;0;1;1218;109;34;128;0;0;24;20;62;13;48;0;0;8;7;15;3;10;0;0;3;2;62;10;38;0;0;6;5

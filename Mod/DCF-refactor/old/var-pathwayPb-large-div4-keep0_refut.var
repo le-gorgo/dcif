@@ -1,0 +1,6 @@
+%Sol source: var-pathwayPb-large-div4-keep0
+%Variant name: refut
+
+solSource(var-pathwayPb-large-div4-keep0).
+pf([]).
+depthLimit(-1).

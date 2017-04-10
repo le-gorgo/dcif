@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<GrapheLiaison>
+<!--  -->
+<NbAgent n="2" />
+<Arc i="0" j="1" />
+</GrapheLiaison>

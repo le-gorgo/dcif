@@ -1,0 +1,6 @@
+%Sol source: var-pathwayPb-large-div16-keep0
+%Variant name: max-5_ld-1--1
+
+solSource(var-pathwayPb-large-div16-keep0).
+pf([m_glyc3p, -m_glyc3p, m_cmp, -m_cmp, m_h2o, -m_h2o, m_succoa, -m_succoa, c_g3pc_h_hdca_hdcea_ocdcea_ttdca_ttdcea, -c_g3pc_h_hdca_hdcea_ocdcea_ttdca_ttdcea, m_myrsACP, -m_myrsACP, c_cdpdag1_glyc3p, -c_cdpdag1_glyc3p, c_dkmpp_h2o, -c_dkmpp_h2o, m_pa_EC, -m_pa_EC, m_hdeACP, -m_hdeACP, c_cmp_h_pgp_EC, -c_cmp_h_pgp_EC]).
+depthLimit(-1).

@@ -1,0 +1,6 @@
+%Sol source: glucolysis
+%Variant name: max-2_ld-1--1
+
+solSource(glucolysis).
+pf([m_fumarate, -m_fumarate, m_citrate, -m_citrate]).
+depthLimit(-1).

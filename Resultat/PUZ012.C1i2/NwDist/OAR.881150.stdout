@@ -1,0 +1,1527 @@
+resultFilename :PUZ012-1.C1i2
+nethod:SOLAR-Inc
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:
+timout :600000
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [137, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [6, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [8, 5, 2, 0, 0, 0, 0, 0]
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [20, 14, 6, 1, 0, 0, 0, 0]
+SolveToClause Finished!
+1 CHARACTERISTIC CLAUSES
+
+[+contains(boxb,apples)]
+
+
+Total execution time was 278 ms.
+
+
+Execution time was 257 ms.
+
+status 103
+---System Timeout---
+SOLAR PROBLEM
+PUZ012-1.C1i2_all_ld-1-2_SOLAR-Inc
+resultFilename :PUZ012-1.C1i2
+nethod:Solar-Carc
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:
+timout :600000
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_fruits(_0,_0)]
+ [+equal_boxes(_0,_0)]
+ [-label(_0,_1), -contains(_0,_1)]
+ [+contains(boxa,_0), +contains(boxb,_0), +contains(boxc,_0)]
+ [+contains(_0,apples), +contains(_0,bananas), +contains(_0,oranges)]
+ [-contains(_0,_1), -contains(_0,_2), +equal_fruits(_1,_2)]
+ [-contains(_0,_1), -contains(_2,_1), +equal_boxes(_0,_2)]
+ [-equal_boxes(boxa,boxb)]
+ [-equal_boxes(boxb,boxc)]
+ [-equal_boxes(boxa,boxc)]
+ [-equal_fruits(apples,bananas)]
+ [-equal_fruits(bananas,oranges)]
+ [-equal_fruits(apples,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Production field:
+ [+contains(_0,_1)]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [202, 26, 12, 1, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+1 CHARACTERISTIC CLAUSES
+
+[+contains(boxb,apples)]
+
+
+Total execution time was 267 ms.
+
+
+Execution time was 244 ms.
+
+status 103
+---System Timeout---
+SOLAR PROBLEM
+PUZ012-1.C1i2_all_ld-1-2_Solar-Carc
+resultFilename :PUZ012-1.C1i2
+nethod:Solar
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:
+timout :600000
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_fruits(_0,_0)]
+ [+equal_boxes(_0,_0)]
+ [-label(_0,_1), -contains(_0,_1)]
+ [+contains(boxa,_0), +contains(boxb,_0), +contains(boxc,_0)]
+ [+contains(_0,apples), +contains(_0,bananas), +contains(_0,oranges)]
+ [-contains(_0,_1), -contains(_0,_2), +equal_fruits(_1,_2)]
+ [-contains(_0,_1), -contains(_2,_1), +equal_boxes(_0,_2)]
+ [-equal_boxes(boxa,boxb)]
+ [-equal_boxes(boxb,boxc)]
+ [-equal_boxes(boxa,boxc)]
+ [-equal_fruits(apples,bananas)]
+ [-equal_fruits(bananas,oranges)]
+ [-equal_fruits(apples,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Production field:
+ [+contains(_0,_1)]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [181, 26, 12, 1, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+1 CHARACTERISTIC CLAUSES
+
+[+contains(boxb,apples)]
+
+
+Total execution time was 217 ms.
+
+
+Execution time was 208 ms.
+
+status 103
+---System Timeout---
+SOLAR PROBLEM
+PUZ012-1.C1i2_all_ld-1-2_Solar
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Star
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_agent3
+timout :600000
+Time for creating graph: 0.206s
+Sys -> Ag0 : {New neighbour}
+Ag0 <------  {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag0 : {Start}
+Sys -> Ag1 : {Start}
+Sys -> Ag2 : {Start}
+Sys -> Ag0 : {Launch}
+Sys -> Ag1 : {Launch}
+Sys -> Ag2 : {Launch}
+Ag0 <------  {New neighbour}
+Ag0 <------  {Start}
+Ag0 -> Sys : {Started}
+Ag0 <------  {Launch}
+Ag0 receives []
+After pruning []
+Input Languages : {Ag1=[+contains(_0,_1)], Ag2=[-contains(_0,_1)]}
+Ag0: updated receivedCl []
+updated lstCsq []
+Ag0 -> Ag1 : Send Clauses : []
+Ag0 -> Ag2 : Send Clauses : []
+Ag1 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Ag1 <------  {Start}
+Ag1 -> Sys : {Started}
+Ag1 <------  {Launch}
+Ag1 <------  Send Clauses : []
+Ag1 receives []
+After pruning []
+Input Languages : {}
+Ag1: updated receivedCl []
+updated lstCsq []
+Ag1 -> Ag0 : Send Clauses : []
+Ag0 <------  Send Clauses : []
+Ag2 <------  {New neighbour}
+Ag2 <------  {New neighbour}
+Ag2 <------  {Start}
+Ag2 -> Sys : {Started}
+Ag2 <------  {Launch}
+Ag2 <------  Send Clauses : []
+Ag2 receives [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+After pruning [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+Input Languages : {}
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-label(_0,_1), -contains(_0,_1)]
+ [+contains(boxa,_0), +contains(boxb,_0), +contains(boxc,_0)]
+ [+contains(_0,apples), +contains(_0,bananas), +contains(_0,oranges)]
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Production field:
+ [+contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [178, 21, 8, 4, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag2 -> Ag0 : Send Clauses : [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag0 <------  Send Clauses : [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag0 receives [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+After pruning [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Input Languages : {Ag1=[+contains(_0,_1)], Ag2=[-contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_fruits(_0,_0)]
+ [-contains(_0,_1), -contains(_0,_2), +equal_fruits(_1,_2)]
+ [-equal_fruits(apples,bananas)]
+ [-equal_fruits(bananas,oranges)]
+ [-equal_fruits(apples,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+contains(boxb,apples)]
+ [+label(boxc,bananas)]
+Top clauses:
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+contains(boxb,apples)]
+ [+label(boxc,bananas)]
+Production field:
+ [+contains(_0,_1), -contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [9, 23, 6, 6, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag0: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag0 -> Ag1 : Send Clauses : [[+contains(boxb,apples)]]
+Ag1 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag1 receives [[+contains(boxb,apples)]]
+After pruning [[+contains(boxb,apples)]]
+Input Languages : {}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_boxes(_0,_0)]
+ [-contains(_0,_1), -contains(_2,_1), +equal_boxes(_0,_2)]
+ [-equal_boxes(boxa,boxb)]
+ [-equal_boxes(boxb,boxc)]
+ [-equal_boxes(boxa,boxc)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+contains(boxb,apples)]
+Production field:
+ [-contains(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [5, 14, 3, 3, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag1: updated receivedCl []
+updated lstCsq [[+contains(boxb,apples)]]
+Ag1 -> Ag0 : Send Clauses : [[+contains(boxb,apples)]]
+Ag0 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag0 receives [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+After pruning []
+Input Languages : {Ag1=[+contains(_0,_1)], Ag2=[-contains(_0,_1)]}
+Ag0: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag0 -> Sys : Send Consequences : [[+contains(boxb,apples)]]
+Sys <------  Send Consequences : [[+contains(boxb,apples)]]
+Ag0 -> Sys : {Finish}
+Sys <------  {Finish}
+Sys -> Ag0 : {Finish}
+Sys -> Ag1 : {Finish}
+Sys -> Ag2 : {Finish}
+Ag1 <------  {Finish}
+Ag2 <------  {Finish}
+Ag0 <------  {Finish}
+1 (NEW) CHARACTERISTIC CLAUSES
+
+[+contains(boxb,apples)]
+
+Total execution time was 1305 ms.
+
+Execution time was 1026 ms.
+
+DCIF PROBLEM STAR
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Star
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Star-FixedRoot-1
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_agent3
+timout :600000
+Time for creating graph: 0.243s
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag0 : {Start}
+Sys -> Ag1 : {Start}
+Sys -> Ag2 : {Start}
+Sys -> Ag0 : {Launch}
+Sys -> Ag1 : {Launch}
+Sys -> Ag2 : {Launch}
+Ag0 <------  {New neighbour}
+Ag0 <------  {New neighbour}
+Ag0 <------  {Start}
+Ag0 -> Sys : {Started}
+Ag0 <------  {Launch}
+Ag1 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Ag1 <------  {Start}
+Ag1 -> Sys : {Started}
+Ag1 <------  {Launch}
+Ag1 receives []
+After pruning []
+Input Languages : {Ag0=[+contains(_0,_1)], Ag2=[-contains(_0,_1)]}
+Ag1: updated receivedCl []
+updated lstCsq []
+Ag1 -> Ag0 : Send Clauses : []
+Ag1 -> Ag2 : Send Clauses : []
+Ag0 <------  Send Clauses : []
+Ag0 receives []
+After pruning []
+Input Languages : {}
+Ag0: updated receivedCl []
+updated lstCsq []
+Ag0 -> Ag1 : Send Clauses : []
+Ag1 <------  Send Clauses : []
+Ag2 <------  {New neighbour}
+Ag2 <------  {New neighbour}
+Ag2 <------  {Start}
+Ag2 -> Sys : {Started}
+Ag2 <------  {Launch}
+Ag2 <------  Send Clauses : []
+Ag2 receives [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+After pruning [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+Input Languages : {}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-label(_0,_1), -contains(_0,_1)]
+ [+contains(boxa,_0), +contains(boxb,_0), +contains(boxc,_0)]
+ [+contains(_0,apples), +contains(_0,bananas), +contains(_0,oranges)]
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Production field:
+ [+contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+>>>>>>>>>>>> Solve - measure : [171, 21, 8, 4, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag2 -> Ag1 : Send Clauses : [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag1 <------  Send Clauses : [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag1 receives [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+After pruning [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Input Languages : {Ag0=[+contains(_0,_1)], Ag2=[-contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_boxes(_0,_0)]
+ [-contains(_0,_1), -contains(_2,_1), +equal_boxes(_0,_2)]
+ [-equal_boxes(boxa,boxb)]
+ [-equal_boxes(boxb,boxc)]
+ [-equal_boxes(boxa,boxc)]
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+contains(boxb,apples)]
+ [+label(boxc,bananas)]
+Top clauses:
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+contains(boxb,apples)]
+ [+label(boxc,bananas)]
+Production field:
+ [+contains(_0,_1), -contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [10, 23, 6, 6, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag1: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag1 -> Ag0 : Send Clauses : [[+contains(boxb,apples)]]
+Ag0 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag0 receives [[+contains(boxb,apples)]]
+After pruning [[+contains(boxb,apples)]]
+Input Languages : {}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_fruits(_0,_0)]
+ [-contains(_0,_1), -contains(_0,_2), +equal_fruits(_1,_2)]
+ [-equal_fruits(apples,bananas)]
+ [-equal_fruits(bananas,oranges)]
+ [-equal_fruits(apples,oranges)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+contains(boxb,apples)]
+Production field:
+ [-contains(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [4, 14, 3, 3, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag0: updated receivedCl []
+updated lstCsq [[+contains(boxb,apples)]]
+Ag0 -> Ag1 : Send Clauses : [[+contains(boxb,apples)]]
+Ag1 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag1 receives [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+After pruning []
+Input Languages : {Ag0=[+contains(_0,_1)], Ag2=[-contains(_0,_1)]}
+Ag1: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag1 -> Sys : Send Consequences : [[+contains(boxb,apples)]]
+Sys <------  Send Consequences : [[+contains(boxb,apples)]]
+Ag1 -> Sys : {Finish}
+Sys <------  {Finish}
+Sys -> Ag0 : {Finish}
+Sys -> Ag1 : {Finish}
+Sys -> Ag2 : {Finish}
+Ag2 <------  {Finish}
+Ag0 <------  {Finish}
+Ag1 <------  {Finish}
+1 (NEW) CHARACTERISTIC CLAUSES
+
+[+contains(boxb,apples)]
+
+Total execution time was 1387 ms.
+
+Execution time was 1028 ms.
+
+DCIF PROBLEM STAR
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Star-FixedRoot-1
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Star-FixedRoot-2
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_agent3
+timout :600000
+Time for creating graph: 0.186s
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag0 : {Start}
+Sys -> Ag1 : {Start}
+Sys -> Ag2 : {Start}
+Sys -> Ag0 : {Launch}
+Sys -> Ag1 : {Launch}
+Sys -> Ag2 : {Launch}
+Ag0 <------  {New neighbour}
+Ag0 <------  {New neighbour}
+Ag0 <------  {Start}
+Ag0 -> Sys : {Started}
+Ag0 <------  {Launch}
+Ag1 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Ag1 <------  {Start}
+Ag1 -> Sys : {Started}
+Ag1 <------  {Launch}
+Ag2 <------  {New neighbour}
+Ag2 <------  {New neighbour}
+Ag2 <------  {Start}
+Ag2 -> Sys : {Started}
+Ag2 <------  {Launch}
+Ag2 receives [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+After pruning [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+Input Languages : {Ag0=[+contains(_0,_1)], Ag1=[+contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-label(_0,_1), -contains(_0,_1)]
+ [+contains(boxa,_0), +contains(boxb,_0), +contains(boxc,_0)]
+ [+contains(_0,apples), +contains(_0,bananas), +contains(_0,oranges)]
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Production field:
+ [+contains(_0,_1), +contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+>>>>>>>>>>>> Solve - measure : [179, 21, 8, 4, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag2 -> Ag0 : Send Clauses : [[+contains(boxb,apples)]]
+Ag0 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag0 receives [[+contains(boxb,apples)]]
+After pruning [[+contains(boxb,apples)]]
+Input Languages : {}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_fruits(_0,_0)]
+ [-contains(_0,_1), -contains(_0,_2), +equal_fruits(_1,_2)]
+ [-equal_fruits(apples,bananas)]
+ [-equal_fruits(bananas,oranges)]
+ [-equal_fruits(apples,oranges)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+contains(boxb,apples)]
+Production field:
+ [-contains(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [9, 14, 3, 3, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag0: updated receivedCl []
+updated lstCsq [[+contains(boxb,apples)]]
+Ag0 -> Ag2 : Send Clauses : [[+contains(boxb,apples)]]
+Ag2 -> Ag1 : Send Clauses : [[+contains(boxb,apples)]]
+Ag1 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag1 receives [[+contains(boxb,apples)]]
+After pruning [[+contains(boxb,apples)]]
+Input Languages : {}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_boxes(_0,_0)]
+ [-contains(_0,_1), -contains(_2,_1), +equal_boxes(_0,_2)]
+ [-equal_boxes(boxa,boxb)]
+ [-equal_boxes(boxb,boxc)]
+ [-equal_boxes(boxa,boxc)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+contains(boxb,apples)]
+Production field:
+ [-contains(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [5, 14, 3, 3, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag1: updated receivedCl []
+updated lstCsq [[+contains(boxb,apples)]]
+Ag1 -> Ag2 : Send Clauses : [[+contains(boxb,apples)]]
+Ag2 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag2 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag2 receives [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)], [+contains(boxb,apples)], [+contains(boxb,apples)]]
+After pruning []
+Input Languages : {Ag0=[+contains(_0,_1)], Ag1=[+contains(_0,_1)]}
+Ag2: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag2 -> Sys : Send Consequences : [[+contains(boxb,apples)]]
+Sys <------  Send Consequences : [[+contains(boxb,apples)]]
+Ag2 -> Sys : {Finish}
+Sys <------  {Finish}
+Sys -> Ag0 : {Finish}
+Sys -> Ag1 : {Finish}
+Sys -> Ag2 : {Finish}
+Ag1 <------  {Finish}
+Ag0 <------  {Finish}
+Ag2 <------  {Finish}
+1 (NEW) CHARACTERISTIC CLAUSES
+
+[+contains(boxb,apples)]
+
+Total execution time was 1287 ms.
+
+Execution time was 1027 ms.
+
+DCIF PROBLEM STAR
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Star-FixedRoot-2
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Async
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_agent3
+timout :600000
+Time for creating graph: 0.22s
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag0 : {Start}
+Sys -> Ag1 : {Start}
+Sys -> Ag2 : {Start}
+Sys -> Ag0 : {Launch}
+Sys -> Ag1 : {Launch}
+Sys -> Ag2 : {Launch}
+Ag0 <------  {New neighbour}
+Ag0 <------  {New neighbour}
+Ag0 <------  {Start}
+Ag0 -> Sys : {Started}
+Ag0 <------  {Launch}
+Ag1 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Ag1 <------  {Start}
+Ag1 -> Sys : {Started}
+Ag1 <------  {Launch}
+Ag2 <------  {New neighbour}
+Ag2 <------  {New neighbour}
+Ag2 <------  {Start}
+Ag2 -> Sys : {Started}
+Ag2 <------  {Launch}
+Ag2 receives [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+After pruning [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+Input Languages : {Ag0=[+contains(_0,_1)], Ag1=[+contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-label(_0,_1), -contains(_0,_1)]
+ [+contains(boxa,_0), +contains(boxb,_0), +contains(boxc,_0)]
+ [+contains(_0,apples), +contains(_0,bananas), +contains(_0,oranges)]
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Production field:
+ [+contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+>>>>>>>>>>>> Solve - measure : [144, 21, 8, 4, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag2 -> Ag0 : Send Clauses : [[+contains(boxb,apples)]]
+Ag0 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag0 receives [[+contains(boxb,apples)]]
+After pruning [[+contains(boxb,apples)]]
+Input Languages : {Ag2=[-contains(_0,_1)], Ag1=[+contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_fruits(_0,_0)]
+ [-contains(_0,_1), -contains(_0,_2), +equal_fruits(_1,_2)]
+ [-equal_fruits(apples,bananas)]
+ [-equal_fruits(bananas,oranges)]
+ [-equal_fruits(apples,oranges)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+contains(boxb,apples)]
+Production field:
+ [-contains(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [8, 14, 3, 3, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag0: updated receivedCl []
+updated lstCsq [[+contains(boxb,apples)]]
+Ag0 -> Ag1 : Send Clauses : [[+contains(boxb,apples)]]
+Ag1 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag1 receives [[+contains(boxb,apples)]]
+After pruning [[+contains(boxb,apples)]]
+Input Languages : {Ag0=[+contains(_0,_1)], Ag2=[-contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_boxes(_0,_0)]
+ [-contains(_0,_1), -contains(_2,_1), +equal_boxes(_0,_2)]
+ [-equal_boxes(boxa,boxb)]
+ [-equal_boxes(boxb,boxc)]
+ [-equal_boxes(boxa,boxc)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+contains(boxb,apples)]
+Production field:
+ [-contains(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [4, 14, 3, 3, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag1: updated receivedCl []
+updated lstCsq [[+contains(boxb,apples)]]
+Ag1 -> Ag0 : Send Clauses : [[+contains(boxb,apples)]]
+Ag1 -> Sys : Send Consequences : [[+contains(boxb,apples)]]
+Sys <------  Send Consequences : [[+contains(boxb,apples)]]
+Ag0 -> Sys : Send Consequences : [[+contains(boxb,apples)]]
+Ag2 -> Ag1 : Send Clauses : [[+contains(boxb,apples)]]
+Sys <------  Send Consequences : [[+contains(boxb,apples)]]
+Ag0 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag0 receives [[+contains(boxb,apples)]]
+After pruning []
+Input Languages : {Ag2=[-contains(_0,_1)], Ag1=[+contains(_0,_1)]}
+Ag0: updated receivedCl []
+updated lstCsq [[+contains(boxb,apples)]]
+Ag1 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag1 receives [[+contains(boxb,apples)]]
+After pruning []
+Input Languages : {Ag0=[+contains(_0,_1)], Ag2=[-contains(_0,_1)]}
+Ag1: updated receivedCl []
+updated lstCsq [[+contains(boxb,apples)]]
+Ag2 -> Sys : Send Consequences : [[+contains(boxb,apples)]]
+Sys <------  Send Consequences : [[+contains(boxb,apples)]]
+Sys -> Sys : {Finish}
+Sys <------  {Finish}
+Sys -> Ag0 : {Finish}
+Sys -> Ag1 : {Finish}
+Sys -> Ag2 : {Finish}
+Ag1 <------  {Finish}
+Ag0 <------  {Finish}
+Ag2 <------  {Finish}
+1 (NEW) CHARACTERISTIC CLAUSES
+
+[+contains(boxb,apples)]
+
+Total execution time was 1353 ms.
+
+Execution time was 1025 ms.
+
+DCIF PROBLEM ASYNC
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Async
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-NewAsync
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_agent3
+timout :600000
+Time for creating graph: 0.225s
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag0 : {Start}
+Sys -> Ag1 : {Start}
+Sys -> Ag2 : {Start}
+Sys -> Ag0 : {Launch}
+Sys -> Ag1 : {Launch}
+Sys -> Ag2 : {Launch}
+Ag0 <------  {New neighbour}
+Ag0 <------  {New neighbour}
+Ag0 <------  {Start}
+Ag0 -> Sys : {Started}
+Ag0 <------  {Launch}
+Ag1 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Ag1 <------  {Start}
+Ag1 -> Sys : {Started}
+Ag1 <------  {Launch}
+Ag2 <------  {New neighbour}
+Ag2 <------  {New neighbour}
+Ag2 <------  {Start}
+Ag2 -> Sys : {Started}
+Ag2 <------  {Launch}
+Ag2 receives [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+After pruning [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+Input Languages : {Ag0=[+contains(_0,_1)], Ag1=[+contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-label(_0,_1), -contains(_0,_1)]
+ [+contains(boxa,_0), +contains(boxb,_0), +contains(boxc,_0)]
+ [+contains(_0,apples), +contains(_0,bananas), +contains(_0,oranges)]
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Production field:
+ [+contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+Ag2 -> Ag0 : Send Clauses : [[+contains(boxb,apples)]]
+Ag0 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag0 receives [[+contains(boxb,apples)]]
+After pruning [[+contains(boxb,apples)]]
+Input Languages : {Ag1=[+contains(_0,_1)], Ag2=[-contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_fruits(_0,_0)]
+ [-contains(_0,_1), -contains(_0,_2), +equal_fruits(_1,_2)]
+ [-equal_fruits(apples,bananas)]
+ [-equal_fruits(bananas,oranges)]
+ [-equal_fruits(apples,oranges)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+contains(boxb,apples)]
+Production field:
+ [-contains(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+Ag0 -> Ag1 : Send Clauses : [[+contains(boxb,apples)]]
+Ag1 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag1 receives [[+contains(boxb,apples)]]
+After pruning [[+contains(boxb,apples)]]
+Input Languages : {Ag0=[+contains(_0,_1)], Ag2=[-contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_boxes(_0,_0)]
+ [-contains(_0,_1), -contains(_2,_1), +equal_boxes(_0,_2)]
+ [-equal_boxes(boxa,boxb)]
+ [-equal_boxes(boxb,boxc)]
+ [-equal_boxes(boxa,boxc)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+contains(boxb,apples)]
+Production field:
+ [-contains(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+Ag1 -> Ag0 : Send Clauses : [[+contains(boxb,apples)]]
+Ag0 <------  Send Clauses : [[+contains(boxb,apples)]]
+>>>>>>>>>>>> Solve - measure : [7, 14, 3, 3, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag0 -> Sys : Send Consequences : [[+contains(boxb,apples)]]
+>>>>>>>>>>>> Solve - measure : [9, 14, 3, 3, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag1 -> Sys : Send Consequences : [[+contains(boxb,apples)]]
+Ag1: updated receivedCl []
+updated lstCsq [[+contains(boxb,apples)]]
+Sys <------  Send Consequences : [[+contains(boxb,apples)]]
+Sys <------  Send Consequences : [[+contains(boxb,apples)]]
+Ag0: updated receivedCl []
+updated lstCsq [[+contains(boxb,apples)]]
+Ag2 -> Ag1 : Send Clauses : [[+contains(boxb,apples)]]
+Ag1 <------  Send Clauses : [[+contains(boxb,apples)]]
+Ag1 receives [[+contains(boxb,apples)]]
+After pruning []
+Input Languages : {Ag0=[+contains(_0,_1)], Ag2=[-contains(_0,_1)]}
+Ag1: updated receivedCl []
+updated lstCsq [[+contains(boxb,apples)]]
+>>>>>>>>>>>> Solve - measure : [184, 21, 8, 4, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2 -> Sys : Send Consequences : [[+contains(boxb,apples)]]
+Sys <------  Send Consequences : [[+contains(boxb,apples)]]
+Ag2: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Sys -> Sys : {Finish}
+Sys <------  {Finish}
+Sys -> Ag0 : {Finish}
+Sys -> Ag1 : {Finish}
+Sys -> Ag2 : {Finish}
+Ag0 <------  {Finish}
+Ag1 <------  {Finish}
+Ag2 <------  {Finish}
+1 (NEW) CHARACTERISTIC CLAUSES
+
+[+contains(boxb,apples)]
+
+Total execution time was 1339 ms.
+
+Execution time was 1022 ms.
+
+DCIF PROBLEM NewASYNC
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-NewAsync
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Token
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_agent3
+timout :600000
+ORDER is: 
+0-1-2-
+Time for creating graph: 0.207s
+Sys -> Ag0 : {New neighbour}
+Ag0 <------  {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag0 : {Start}
+Sys -> Ag1 : {Start}
+Sys -> Ag2 : {Start}
+Sys -> Ag0 : {Launch}
+Ag1 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Ag1 <------  {Start}
+Ag1 -> Sys : {Started}
+Ag0 <------  {New neighbour}
+Ag0 <------  {Start}
+Ag0 -> Sys : {Started}
+Ag0 <------  {Launch}
+Ag0 receives []
+After pruning []
+Input Languages : {Ag1=[], Ag2=[-contains(_0,_1)]}
+Ag0: updated receivedCl []
+updated lstCsq []
+Ag0 -> Ag1 : Send Clauses: Forward Clauses = []
+Ag1 <------  Send Clauses: Forward Clauses = []
+Ag1 receives []
+After pruning []
+Input Languages : {Ag0=[], Ag2=[-contains(_0,_1)]}
+Ag1: updated receivedCl []
+updated lstCsq []
+Ag1 -> Ag2 : Send Clauses: Forward Clauses = []
+Ag2 <------  {New neighbour}
+Ag2 <------  {New neighbour}
+Ag2 <------  {Start}
+Ag2 -> Sys : {Started}
+Ag2 <------  Send Clauses: Forward Clauses = []
+Ag2 receives [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+After pruning [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+Input Languages : {Ag0=[+contains(_0,_1)], Ag1=[+contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-label(_0,_1), -contains(_0,_1)]
+ [+contains(boxa,_0), +contains(boxb,_0), +contains(boxc,_0)]
+ [+contains(_0,apples), +contains(_0,bananas), +contains(_0,oranges)]
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Production field:
+ [+contains(_0,_1), +contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+>>>>>>>>>>>> Solve - measure : [154, 21, 8, 4, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag2 -> Ag0 : Send Clauses: Forward {N [Ag2]} Clauses = [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag0 <------  Send Clauses: Forward {N [Ag2]} Clauses = [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag0 receives [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+After pruning [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Input Languages : {Ag1=[], Ag2=[-contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_fruits(_0,_0)]
+ [-contains(_0,_1), -contains(_0,_2), +equal_fruits(_1,_2)]
+ [-equal_fruits(apples,bananas)]
+ [-equal_fruits(bananas,oranges)]
+ [-equal_fruits(apples,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+contains(boxb,apples)]
+ [+label(boxc,bananas)]
+Top clauses:
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+contains(boxb,apples)]
+ [+label(boxc,bananas)]
+Production field:
+ [-contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [10, 23, 6, 6, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag0: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag0 -> Ag1 : Send Clauses: Forward {N [Ag2]} Clauses = [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag1 <------  Send Clauses: Forward {N [Ag2]} Clauses = [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag1 receives [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+After pruning [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Input Languages : {Ag0=[], Ag2=[-contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_boxes(_0,_0)]
+ [-contains(_0,_1), -contains(_2,_1), +equal_boxes(_0,_2)]
+ [-equal_boxes(boxa,boxb)]
+ [-equal_boxes(boxb,boxc)]
+ [-equal_boxes(boxa,boxc)]
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+contains(boxb,apples)]
+ [+label(boxc,bananas)]
+Top clauses:
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+contains(boxb,apples)]
+ [+label(boxc,bananas)]
+Production field:
+ [-contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [6, 23, 6, 6, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag1: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag1 -> Ag2 : Send Clauses: Forward {N [Ag2]} Clauses = [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag2 <------  Send Clauses: Forward {N [Ag2]} Clauses = [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag2 receives [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+After pruning []
+Input Languages : {Ag0=[+contains(_0,_1)], Ag1=[+contains(_0,_1)]}
+Ag2: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+Ag2 -> Ag1 : Send Clauses: Backward Clauses = [[+contains(boxb,apples)]]
+Ag1 <------  Send Clauses: Backward Clauses = [[+contains(boxb,apples)]]
+Ag1 receives [[+contains(boxb,apples)]]
+After pruning []
+Input Languages : {Ag0=[], Ag2=[-contains(_0,_1)]}
+Ag1 -> Sys : Send Consequences : [[+contains(boxb,apples)]]
+Sys <------  Send Consequences : [[+contains(boxb,apples)]]
+Ag1 -> Sys : {Finish}
+Sys <------  {Finish}
+Sys -> Ag0 : {Finish}
+Sys -> Ag1 : {Finish}
+Sys -> Ag2 : {Finish}
+Ag2 <------  {Finish}
+Ag0 <------  {Finish}
+Ag1 <------  {Finish}
+1 (NEW) CHARACTERISTIC CLAUSES
+
+[+contains(boxb,apples)]
+
+Total execution time was 1311 ms.
+
+Execution time was 1031 ms.
+
+DCIF PROBLEM TOKEN
+ORDER is: 
+0-1-2-
+len of order is 3
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Token
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Token-FixedOrder-2-1-0
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_agent3
+timout :600000
+ORDER is: 
+2-1-0-
+Time for creating graph: 0.186s
+Sys -> Ag0 : {New neighbour}
+Ag0 <------  {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag0 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag1 : {New neighbour}
+Sys -> Ag2 : {New neighbour}
+Sys -> Ag0 : {Start}
+Sys -> Ag1 : {Start}
+Sys -> Ag2 : {Start}
+Sys -> Ag2 : {Launch}
+Ag0 <------  {New neighbour}
+Ag0 <------  {Start}
+Ag0 -> Sys : {Started}
+Ag1 <------  {New neighbour}
+Ag1 <------  {New neighbour}
+Ag1 <------  {Start}
+Ag1 -> Sys : {Started}
+Ag2 <------  {New neighbour}
+Ag2 <------  {New neighbour}
+Ag2 <------  {Start}
+Ag2 -> Sys : {Started}
+Ag2 <------  {Launch}
+Ag2 receives [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+After pruning [[+label(boxb,oranges)], [+label(boxa,apples)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+Input Languages : {Ag0=[+contains(_0,_1)], Ag1=[+contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [-label(_0,_1), -contains(_0,_1)]
+ [+contains(boxa,_0), +contains(boxb,_0), +contains(boxc,_0)]
+ [+contains(_0,apples), +contains(_0,bananas), +contains(_0,oranges)]
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Top clauses:
+ [+label(boxb,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxc,bananas)]
+ [+contains(boxb,apples)]
+Production field:
+ [+contains(_0,_1), +contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+Sys <------  {Started}
+Sys <------  {Started}
+Sys <------  {Started}
+>>>>>>>>>>>> Solve - measure : [147, 21, 8, 4, 0, 0, 0, 0]
+Solver finished.
+SolveToClause Finished!
+Ag2: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag2 -> Ag1 : Send Clauses: Forward {N [Ag2]} Clauses = [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag1 <------  Send Clauses: Forward {N [Ag2]} Clauses = [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag1 receives [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+After pruning [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Input Languages : {Ag0=[], Ag2=[-contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_boxes(_0,_0)]
+ [-contains(_0,_1), -contains(_2,_1), +equal_boxes(_0,_2)]
+ [-equal_boxes(boxa,boxb)]
+ [-equal_boxes(boxb,boxc)]
+ [-equal_boxes(boxa,boxc)]
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+contains(boxb,apples)]
+ [+label(boxc,bananas)]
+Top clauses:
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+contains(boxb,apples)]
+ [+label(boxc,bananas)]
+Production field:
+ [-contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [11, 23, 6, 6, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag1: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag1 -> Ag0 : Send Clauses: Forward {N [Ag2]} Clauses = [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag0 <------  Send Clauses: Forward {N [Ag2]} Clauses = [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag0 receives [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+After pruning [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Input Languages : {Ag1=[], Ag2=[-contains(_0,_1)]}
+Starting SolveToClause...
+Launching solver...
+----------------------------------------------------------------------
+Clauses:
+ [+equal_fruits(_0,_0)]
+ [-contains(_0,_1), -contains(_0,_2), +equal_fruits(_1,_2)]
+ [-equal_fruits(apples,bananas)]
+ [-equal_fruits(bananas,oranges)]
+ [-equal_fruits(apples,oranges)]
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+contains(boxb,apples)]
+ [+label(boxc,bananas)]
+Top clauses:
+ [+label(boxa,apples)]
+ [+label(boxb,oranges)]
+ [+contains(boxb,apples)]
+ [+label(boxc,bananas)]
+Production field:
+ [-contains(_0,_1), +label(_0,_1), +contains(_0,_1):2]:2
+
+>>>>>>>>>>>> Solving at depth : 2( real 2)
+>>>>>>>>>>>> Solve - measure : [8, 23, 6, 6, 0, 0, 2, 0]
+Solver finished.
+SolveToClause Finished!
+Ag0: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag0 -> Ag2 : Send Clauses: Forward {N [Ag2]} Clauses = [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag2 <------  Send Clauses: Forward {N [Ag2]} Clauses = [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+Ag2 receives [[+label(boxa,apples)], [+label(boxb,oranges)], [+contains(boxb,apples)], [+label(boxc,bananas)]]
+After pruning []
+Input Languages : {Ag0=[+contains(_0,_1)], Ag1=[+contains(_0,_1)]}
+Ag2: updated receivedCl []
+updated lstCsq [[+label(boxa,apples)], [+label(boxb,oranges)], [+label(boxc,bananas)], [+contains(boxb,apples)]]
+Ag2 -> Ag0 : Send Clauses: Backward Clauses = [[+contains(boxb,apples)]]
+Ag0 <------  Send Clauses: Backward Clauses = [[+contains(boxb,apples)]]
+Ag0 receives [[+contains(boxb,apples)]]
+After pruning []
+Input Languages : {Ag1=[], Ag2=[-contains(_0,_1)]}
+Ag0 -> Sys : Send Consequences : [[+contains(boxb,apples)]]
+Sys <------  Send Consequences : [[+contains(boxb,apples)]]
+Ag0 -> Sys : {Finish}
+Sys <------  {Finish}
+Sys -> Ag0 : {Finish}
+Sys -> Ag1 : {Finish}
+Sys -> Ag2 : {Finish}
+Ag2 <------  {Finish}
+Ag1 <------  {Finish}
+Ag0 <------  {Finish}
+1 (NEW) CHARACTERISTIC CLAUSES
+
+[+contains(boxb,apples)]
+
+Total execution time was 1285 ms.
+
+Execution time was 1029 ms.
+
+DCIF PROBLEM TOKEN
+ORDER is: 
+2-1-0-
+len of order is 3
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Token-FixedOrder-2-1-0
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Async
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+Time for creating graph: 0.32s
+3 (NEW) CHARACTERISTIC CLAUSES
+
+[+contains(boxa,bananas)]
+[+contains(boxc,oranges)]
+[+contains(boxb,apples)]
+
+Total execution time was 600652 ms.
+
+Execution time was 600124 ms.
+
+---System Timeout---
+DCIF PROBLEM ASYNC
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Async
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-NewAsync
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+Time for creating graph: 0.301s
+7 (NEW) CHARACTERISTIC CLAUSES
+
+[+contains(boxb,apples)]
+[+contains(boxa,oranges), +contains(boxc,oranges)]
+[+contains(boxb,bananas), +contains(boxa,bananas)]
+[+contains(boxa,bananas), +contains(boxa,oranges)]
+[+contains(boxc,apples), +contains(boxa,bananas)]
+[+contains(boxb,bananas), +contains(boxc,oranges)]
+[+contains(boxc,apples), +contains(boxc,oranges)]
+
+Total execution time was 600252 ms.
+
+Execution time was 599747 ms.
+
+---System Timeout---
+DCIF PROBLEM NewASYNC
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-NewAsync
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Star
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+Time for creating graph: 0.224s
+0 (NEW) CHARACTERISTIC CLAUSES
+
+
+Total execution time was 600811 ms.
+
+Execution time was 600431 ms.
+
+---System Timeout---
+DCIF PROBLEM STAR
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Star
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Star-FixedRoot-1
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+Time for creating graph: 0.197s
+0 (NEW) CHARACTERISTIC CLAUSES
+
+
+Total execution time was 600731 ms.
+
+Execution time was 600420 ms.
+
+---System Timeout---
+DCIF PROBLEM STAR
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Star-FixedRoot-1
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Star-FixedRoot-2
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+Time for creating graph: 0.195s
+0 (NEW) CHARACTERISTIC CLAUSES
+
+
+Total execution time was 600986 ms.
+
+Execution time was 600670 ms.
+
+---System Timeout---
+DCIF PROBLEM STAR
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Star-FixedRoot-2
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Star-FixedRoot-3
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+Time for creating graph: 0.217s
+0 (NEW) CHARACTERISTIC CLAUSES
+
+
+Total execution time was 600683 ms.
+
+Execution time was 600330 ms.
+
+---System Timeout---
+DCIF PROBLEM STAR
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Star-FixedRoot-3
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Star-FixedRoot-4
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+Time for creating graph: 0.337s
+0 (NEW) CHARACTERISTIC CLAUSES
+
+
+Total execution time was 600771 ms.
+
+Execution time was 600207 ms.
+
+---System Timeout---
+DCIF PROBLEM STAR
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Star-FixedRoot-4
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Star-FixedRoot-5
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+Time for creating graph: 0.25s
+0 (NEW) CHARACTERISTIC CLAUSES
+
+
+Total execution time was 600109 ms.
+
+Execution time was 599626 ms.
+
+---System Timeout---
+DCIF PROBLEM STAR
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Star-FixedRoot-5
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Star-FixedRoot-6
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+Time for creating graph: 0.216s
+0 (NEW) CHARACTERISTIC CLAUSES
+
+
+Total execution time was 600722 ms.
+
+Execution time was 600363 ms.
+
+---System Timeout---
+DCIF PROBLEM STAR
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Star-FixedRoot-6
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Star-FixedRoot-7
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+Time for creating graph: 0.307s
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Token
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+ORDER is: 
+0-1-2-3-4-5-6-
+Time for creating graph: 0.272s
+0 (NEW) CHARACTERISTIC CLAUSES
+
+
+Total execution time was 600142 ms.
+
+Execution time was 599715 ms.
+
+---System Timeout---
+DCIF PROBLEM TOKEN
+ORDER is: 
+0-1-2-3-4-5-6-
+len of order is 7
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Token
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Async
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+Time for creating graph: 0.216s
+3 (NEW) CHARACTERISTIC CLAUSES
+
+[+contains(boxb,apples)]
+[+contains(boxa,bananas)]
+[+contains(boxc,oranges)]
+
+Total execution time was 600684 ms.
+
+Execution time was 600304 ms.
+
+---System Timeout---
+DCIF PROBLEM ASYNC
+PUZ012-1.C1i2_all_ld-1-2_DICF-PB-Async
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Token-FixedOrder-7-6-5-4-3-2-1-0
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+ORDER is: 
+7-6-5-4-3-2-1-0-
+Time for creating graph: 0.202s
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Token-FixedOrder-4-5-2-1-0-3-6-7
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+ORDER is: 
+4-5-2-1-0-3-6-7-
+Time for creating graph: 0.288s
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Token-FixedOrder-1-6-7-0-4-5-3-2
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+ORDER is: 
+1-6-7-0-4-5-3-2-
+Time for creating graph: 0.247s
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Token-FixedOrder-5-0-3-6-7-2-1-4
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+ORDER is: 
+5-0-3-6-7-2-1-4-
+Time for creating graph: 0.334s
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Token-FixedOrder-6-1-5-4-2-7-3-0
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+ORDER is: 
+6-1-5-4-2-7-3-0-
+Time for creating graph: 0.239s
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Token-FixedOrder-4-2-3-5-0-1
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+ORDER is: 
+4-2-3-5-0-1-
+Time for creating graph: 0.285s
+resultFilename :PUZ012-1.C1i2
+nethod:DICF-PB-Token-FixedOrder-3-5-4-0-1-2
+pbBasename :PUZ012-1.C1i2
+variantSuffix:_all_ld-1-2
+distr suff:_k7
+timout :600000
+ORDER is: 
+3-5-4-0-1-2-
+Time for creating graph: 0.262s
+Dooone

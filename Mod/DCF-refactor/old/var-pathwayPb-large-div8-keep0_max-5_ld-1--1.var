@@ -1,0 +1,6 @@
+%Sol source: var-pathwayPb-large-div8-keep0
+%Variant name: max-5_ld-1--1
+
+solSource(var-pathwayPb-large-div8-keep0).
+pf([m_h, -m_h, m_nadh, -m_nadh, m_nadph, -m_nadph, m_cmp, -m_cmp, m_h2o, -m_h2o, m_for, -m_for, m_atp, -m_atp, m_adp, -m_adp, c_accoa_h_nadh, -c_accoa_h_nadh, c_acg5p_h_nadph, -c_acg5p_h_nadph, c_4per_h_nadh, -c_4per_h_nadh, c_dhf_h_nadph, -c_dhf_h_nadph, c_gthox_h_nadph, -c_gthox_h_nadph, c_h_nadph_so3, -c_h_nadph_so3, c_h_methf_nadph, -c_h_methf_nadph, m_malACP, -m_malACP, c_6pgl_h_nadph, -c_6pgl_h_nadph, c_aspsa_h_nadph, -c_aspsa_h_nadph, c_3dhsk_h_nadph, -c_3dhsk_h_nadph, m_pi, -m_pi, m_pyr, -m_pyr, m_glx, -m_glx, c_fruur_h_nadh, -c_fruur_h_nadh, m_nicrnt, -m_nicrnt, c_ala_L_btn_h, -c_ala_L_btn_h, c_akg_h_nadph_nh4, -c_akg_h_nadph_nh4, c_cmp_h_pgp_EC, -c_cmp_h_pgp_EC, c_cmp_h_ps_EC, -c_cmp_h_ps_EC, c_glyald_h_nadh, -c_glyald_h_nadh]).
+depthLimit(-1).

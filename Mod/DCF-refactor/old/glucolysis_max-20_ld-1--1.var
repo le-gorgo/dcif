@@ -1,0 +1,6 @@
+%Sol source: glucolysis
+%Variant name: max-20_ld-1--1
+
+solSource(glucolysis).
+pf([m_fumarate, -m_fumarate, m_citrate, -m_citrate, m_formaldehyde, -m_formaldehyde, m_succinate, -m_succinate, m_ornithine, -m_ornithine, m_creatine, -m_creatine, m_sarcosine, -m_sarcosine, m_betaalanine, -m_betaalanine, m_acetylcoa, -m_acetylcoa, m_pyruvate, -m_pyruvate, m_acryloylcoa, -m_acryloylcoa, m_e2oxoglutarate, -m_e2oxoglutarate, c_compoundCformaldehyde_methylamineC, -c_compoundCformaldehyde_methylamineC, c_compoundCurea_ornithineC, -c_compoundCurea_ornithineC, c_compoundCurea_sarcosineC, -c_compoundCurea_sarcosineC, c_compoundCarginine_fumarateC, -c_compoundCarginine_fumarateC, c_compoundCcitrate_transaconitateC, -c_compoundCcitrate_transaconitateC, m_methylamine, -m_methylamine, m_urea, -m_urea, m_creatinine, -m_creatinine]).
+depthLimit(-1).

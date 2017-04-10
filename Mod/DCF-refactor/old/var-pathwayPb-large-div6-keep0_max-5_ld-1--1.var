@@ -1,0 +1,6 @@
+%Sol source: var-pathwayPb-large-div6-keep0
+%Variant name: max-5_ld-1--1
+
+solSource(var-pathwayPb-large-div6-keep0).
+pf([m_co2, -m_co2, m_nadp, -m_nadp, m_h2o, -m_h2o, m_ACP, -m_ACP, m_g3p, -m_g3p, m_succ, -m_succ, m_glyc3p, -m_glyc3p, m_dhap, -m_dhap, m_2dr1p, -m_2dr1p, m_atp, -m_atp, m_pep, -m_pep, m_q8h2, -m_q8h2, c_dhap_lald_L, -c_dhap_lald_L, m_h2o2, -m_h2o2, m_gthrd, -m_gthrd, m_ttdca, -m_ttdca, m_ttdcea, -m_ttdcea, m_hdca, -m_hdca, m_hdcea, -m_hdcea, m_ocdcea, -m_ocdcea, m_uacgam, -m_uacgam, c_agpc_EC_h_hdca_hdcea_ocdcea_ttdca_ttdcea, -c_agpc_EC_h_hdca_hdcea_ocdcea_ttdca_ttdcea, m_pg_EC, -m_pg_EC, c_agpg_EC_h_hdca_hdcea_ocdcea_ttdca_ttdcea, -c_agpg_EC_h_hdca_hdcea_ocdcea_ttdca_ttdcea, c_agpe_EC_h_hdca_hdcea_ocdcea_ttdca_ttdcea, -c_agpe_EC_h_hdca_hdcea_ocdcea_ttdca_ttdcea, c_g3pg_h_hdca_hdcea_ocdcea_ttdca_ttdcea, -c_g3pg_h_hdca_hdcea_ocdcea_ttdca_ttdcea, c_g3pe_h_hdca_hdcea_ocdcea_ttdca_ttdcea, -c_g3pe_h_hdca_hdcea_ocdcea_ttdca_ttdcea, c_g3pc_h_hdca_hdcea_ocdcea_ttdca_ttdcea, -c_g3pc_h_hdca_hdcea_ocdcea_ttdca_ttdcea, c_g3p_s7p, -c_g3p_s7p, m_ala_D, -m_ala_D]).
+depthLimit(-1).

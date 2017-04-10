@@ -1,0 +1,6 @@
+%Sol source: pathwayPb-large
+%Variant name: max-1_ld2-6
+
+solSource(pathwayPb-large).
+pf([m_h, -m_h, m_h2o, -m_h2o, m_atp, -m_atp, m_adp, -m_adp, m_pi, -m_pi, m_nad, -m_nad, m_ppi, -m_ppi, m_nadh, -m_nadh, m_co2, -m_co2, m_nadp, -m_nadp, m_nadph, -m_nadph, m_glu_L, -m_glu_L, m_coa, -m_coa, m_nh4, -m_nh4, m_amp, -m_amp, m_akg, -m_akg, m_accoa, -m_accoa, m_ACP, -m_ACP, m_o2, -m_o2, m_asp_L, -m_asp_L, m_g3p, -m_g3p, m_succ, -m_succ, m_g1p, -m_g1p, m_f6p, -m_f6p, m_cmp, -m_cmp, m_pyr, -m_pyr]<=2).
+depthLimit(6).

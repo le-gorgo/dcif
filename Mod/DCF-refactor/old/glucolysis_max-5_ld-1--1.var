@@ -1,0 +1,6 @@
+%Sol source: glucolysis
+%Variant name: max-5_ld2-6
+
+solSource(glucolysis).
+pf([m_fumarate, -m_fumarate, m_citrate, -m_citrate, m_formaldehyde, -m_formaldehyde, m_succinate, -m_succinate, m_ornithine, -m_ornithine]).
+depthLimit(-1).

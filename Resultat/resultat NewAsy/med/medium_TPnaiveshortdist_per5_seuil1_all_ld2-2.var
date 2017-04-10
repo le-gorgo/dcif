@@ -1,0 +1,6 @@
+%Sol source: medium_TPnaiveshortdist_per5_seuil1
+%Variant name: all_ld2-2
+
+solSource(medium_TPnaiveshortdist_per5_seuil1).
+pf([+p69, -p69, +p76, -p76, +p82, -p82, +p88, -p88, +p32, -p32] <= 2).
+depthLimit(2).

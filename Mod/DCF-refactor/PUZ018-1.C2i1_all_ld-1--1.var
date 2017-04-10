@@ -1,0 +1,6 @@
+%Sol source: PUZ018-1.C2i1
+%Variant name: all_ld-1--1
+
+solSource(PUZ018-1.C2i1).
+pf([-all_on(_0), +consecutive(_0,_1), +on(_0,_1), -on(_0,_1), -same_person(_0,_1), -same_day(_0,_1)]).
+depthLimit(-1).

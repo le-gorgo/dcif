@@ -1,0 +1,6 @@
+%Sol source: PUZ017-1.C2i1
+%Variant name: all_ld-1--1
+
+solSource(PUZ017-1.C2i1).
+pf([+hasperson(_0,_1), -hascolor(_0,_1), -hasperson(_0,_1), +hascolor(_0,_1), -left(_0,_1), +left(_0,_1), -haspet(_0,_1), +haspet(_0,_1), +hasdrink(_0,_1), -hasdrink(_0,_1), -hasgame(_0,_1), +hasgame(_0,_1), -samehouse(_0,_1), +nextto(_0,_1), +samehouse(_0,_1), -nextto(_0,_1)]).
+depthLimit(-1).

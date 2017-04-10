@@ -1,0 +1,11 @@
+problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
+PUZ008-1.C1i2_all_ld2--1;_agent2;2;DICF-PB-Star;0;16;1473;216;35;149;0;0;12;50;184;18;89;0;0;7;32;32;17;60;0;0;5;18;184;17;89;0;0;7;32
+PUZ008-1.C1i2_all_ld2--1;_agent2;2;DICF-PB-Star-FixedRoot-1;0;18;1137;236;35;149;0;0;12;52;194;18;89;0;0;7;36;42;17;60;0;0;5;16;194;17;89;0;0;5;16
+PUZ008-1.C1i2_all_ld2--1;_agent2;2;DICF-PB-Async;0;18;1124;163;35;149;0;0;16;68;133;18;89;0;0;9;36;30;17;60;0;0;7;32;133;17;89;0;0;9;32
+PUZ008-1.C1i2_all_ld2--1;_agent2;2;DICF-PB-NewAsync;0;7;1120;83;10;42;0;0;14;18;71;7;31;0;0;8;12;12;3;11;0;0;6;6;71;7;31;0;0;8;12
+PUZ008-1.C1i2_all_ld2--1;_agent4;4;DICF-PB-Star;0;16;1344;363;71;269;0;0;42;118;228;19;85;0;0;21;64;43;17;60;0;0;7;17;228;17;85;0;0;21;64
+PUZ008-1.C1i2_all_ld2--1;_agent4;4;DICF-PB-NewAsync;0;13;1173;209;35;147;0;0;132;140;109;10;50;0;0;34;40;33;8;31;0;0;32;32;109;10;50;0;0;34;40
+PUZ008-1.C1i2_all_ld2--1;_agent4;4;DICF-PB-Star-FixedRoot-1;0;21;1138;338;79;293;0;0;48;142;165;21;80;0;0;24;84;47;16;70;0;0;8;16;165;16;80;0;0;8;16
+PUZ008-1.C1i2_all_ld2--1;_agent4;4;DICF-PB-Star-FixedRoot-2;0;21;1159;410;80;307;0;0;72;142;178;21;85;0;0;36;84;74;17;72;0;0;12;16;178;17;85;0;0;12;16
+PUZ008-1.C1i2_all_ld2--1;_agent4;4;DICF-PB-Token;0;21;1128;376;80;298;0;0;35;179;220;21;85;0;0;9;63;48;17;70;0;0;8;32;220;17;85;0;0;9;32
+PUZ008-1.C1i2_all_ld2--1;_agent4;4;DICF-PB-Async;0;21;2181;327;79;301;0;0;128;316;135;21;80;0;0;37;84;54;16;72;0;0;25;64;135;16;80;0;0;25;64

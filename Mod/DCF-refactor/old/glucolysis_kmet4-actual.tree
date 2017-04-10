@@ -1,0 +1,7 @@
+nbAgents(4).
+edge(2,3,[r_d2d6d1d14_54, -r_d1d3d99d1_11, r_d4d2d1d54_47, -r_d2d6d1d14_55, -m_isocitrate, -r_d4d2d1d54_46, m_isocitrate, r_d1d3d99d1_10]).
+edge(0,3,[-r_d1d3d99d1_10, r_d4d2d1d2_9, r_d1d3d99d1_11, -r_d4d2d1d2_8]).
+edge(3,2,[r_d2d6d1d14_55, -r_d4d2d1d54_47, r_d4d2d1d54_46, r_d1d3d99d1_11, m_isocitrate, -m_isocitrate, -r_d2d6d1d14_54, -r_d1d3d99d1_10]).
+edge(1,0,[-m_urea, -r_d2d1d1d2_30, r_d2d1d1d2_31, m_urea]).
+edge(0,1,[-r_d2d1d1d2_31, r_d2d1d1d2_30, m_urea, -m_urea]).
+edge(3,0,[-r_d1d3d99d1_11, -r_d4d2d1d2_9, r_d4d2d1d2_8, r_d1d3d99d1_10]).

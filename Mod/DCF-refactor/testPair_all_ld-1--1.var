@@ -1,0 +1,7 @@
+%Sol source: testPair
+%Variant name: all_ld-1--1
+
+solSource(testPair).
+pf([+pair(_), -pair(n1)]).
+%gpf([+pair(_), -pair(_)]<=1).
+depthLimit(5).

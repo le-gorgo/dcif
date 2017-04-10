@@ -1,0 +1,6 @@
+%Sol source: toy-pb1
+%Variant name: orig
+
+solSource(toy-pb1).
+pf([h]).
+depthLimit(99).

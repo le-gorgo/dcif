@@ -1,0 +1,15 @@
+nbAgents(8).
+edge(2,1,[r_d2d1d1d2_31, -m_urea, -r_d2d1d1d2_30, m_urea]).
+edge(3,2,[-r_d1d5d99d1_39, r_d1d5d99d1_38]).
+edge(1,0,[-r_d4d3d2d1_16, r_d3d5d3d1_28, -r_d3d5d3d1_26, r_d4d3d2d1_17]).
+edge(0,1,[-r_d3d5d3d1_28, -r_d4d3d2d1_17, r_d4d3d2d1_16, r_d3d5d3d1_26]).
+edge(0,4,[-r_d1d3d99d1_10, r_d1d3d99d1_11, r_d4d2d1d2_9, -r_d4d2d1d2_8]).
+edge(6,7,[-r_d1d2d1d31_57, -r_d2d1d3d1_50, m_l2aminoadipate, -r_d1d1d1d42_3, -r_d1d3d99d1_11, r_d1d3d99d1_10, r_d1d1d1d42_2, r_d2d1d3d1_51]).
+edge(7,6,[-r_d1d3d99d1_10, -m_l2aminoadipate, r_d1d2d1d31_57, r_d2d1d3d1_50, -r_d1d1d1d42_2, r_d1d1d1d42_3, r_d1d3d99d1_11, -r_d2d1d3d1_51]).
+edge(5,4,[-r_d2d3d3d1_65, r_d2d3d3d1_64, -r_d1d1d1d42_3, -r_d1d3d99d1_11, r_d1d3d99d1_10, r_d1d1d1d42_2, r_d2d6d1d14_54, -r_d2d6d1d14_55]).
+edge(4,5,[r_d1d3d99d1_11, -r_d2d3d3d1_64, r_d2d6d1d14_55, r_d1d1d1d42_3, -r_d1d1d1d42_2, r_d2d3d3d1_65, -r_d2d6d1d14_54, -r_d1d3d99d1_10]).
+edge(1,2,[-r_d2d1d1d2_31, m_urea, r_d2d1d1d2_30, -m_urea]).
+edge(4,0,[r_d4d2d1d2_8, -r_d1d3d99d1_11, -r_d4d2d1d2_9, r_d1d3d99d1_10]).
+edge(2,3,[r_d1d5d99d1_39, -r_d1d5d99d1_38]).
+edge(7,5,[-r_d1d1d1d27_60, -r_d1d1d1d42_3, -m_lactate, -r_d1d3d99d1_11, r_d1d3d99d1_10, r_d1d1d1d42_2, r_d2d6d1d14_54, m_lactate, r_d4d2d1d54_47, -r_d2d6d1d14_55]).
+edge(5,7,[r_d1d1d1d27_60, -r_d1d3d99d1_10, -r_d4d2d1d54_47, -r_d1d1d1d42_2, r_d1d1d1d42_3, -r_d2d6d1d14_54, r_d1d3d99d1_11, r_d2d6d1d14_55, m_lactate, -m_lactate]).

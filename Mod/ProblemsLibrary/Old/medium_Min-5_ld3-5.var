@@ -1,0 +1,6 @@
+%Sol source: medium
+%Variant name: min-5_ld3-5
+
+solSource(medium).
+pf([p17, -p17, p19, -p19, p53, -p53, p18, -p18, p20, -p20]).
+depthLimit(5).

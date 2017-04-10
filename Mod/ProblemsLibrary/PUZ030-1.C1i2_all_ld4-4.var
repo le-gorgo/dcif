@@ -1,0 +1,6 @@
+%Sol source: PUZ030-1.C1i2
+%Variant name: all_ld4-4
+
+solSource(PUZ030-1.C1i2).
+pf([+neither(_0), +both(_0), +oneof(_0), +salt(_0), +mustard(_0)] <= 4).
+depthLimit(4).

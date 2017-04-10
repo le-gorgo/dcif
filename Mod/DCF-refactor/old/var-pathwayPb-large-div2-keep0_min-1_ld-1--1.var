@@ -1,0 +1,6 @@
+%Sol source: var-pathwayPb-large-div2-keep0
+%Variant name: min-1_ld-1--1
+
+solSource(var-pathwayPb-large-div2-keep0).
+pf([c_asp_L_nh4, -c_asp_L_nh4, c_amp_asn_L_h_ppi, -c_amp_asn_L_h_ppi, r_R5, -r_R5, r_R14a, -r_R14a, m_lald_L, -m_lald_L, r_R17, -r_R17, c_ac_h_nadh, -c_ac_h_nadh, c_adp_h_ru5p_L, -c_adp_h_ru5p_L, r_R21, -r_R21, r_R22, -r_R22, r_R26a, -r_R26a, c_2dh3dgal6p_adp_h, -c_2dh3dgal6p_adp_h, c_dhap_pyr, -c_dhap_pyr, c_h2o_nad_pacald, -c_h2o_nad_pacald, c_atp_f1p, -c_atp_f1p, c_adp_fc1p_h, -c_adp_fc1p_h]).
+depthLimit(-1).

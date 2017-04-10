@@ -1,0 +1,6 @@
+%Sol source: PUZ019-1.C2i1
+%Variant name: all_ld-1--1
+
+solSource(PUZ019-1.C2i1).
+pf([+has_job(_0,_1), -husband(_0,_1), -has_job(_0,_1), +husband(_0,_1), -equal_people(_0,_1), -equal_jobs(_0,_1), +educated(_0), -male(_0), -female(_0)]).
+depthLimit(-1).

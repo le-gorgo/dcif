@@ -1,0 +1,6 @@
+%Sol source: glucolysis
+%Variant name: refut
+
+solSource(glucolysis).
+pf([]).
+depthLimit(-1).

@@ -1,0 +1,6 @@
+%Sol source: glucolysis
+%Variant name: manual_dl8-3
+
+solSource(glucolysis).
+pf([m_acetate,m_transaconitate,m_tmao,-m_arginine,-m_ornithine]<=3).
+depthLimit(18).

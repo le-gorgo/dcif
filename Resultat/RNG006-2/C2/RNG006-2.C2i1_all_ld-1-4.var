@@ -1,0 +1,6 @@
+%Sol source: RNG005-2.C1i2
+%Variant name: all_ld-1-4
+
+solSource(RNG006-2.C2i1).
+pf([-sum(_0,_1,_2), -product(_0,_1,_2)]).
+depthLimit(4).

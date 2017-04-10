@@ -1,0 +1,6 @@
+%Sol source: glucolysis
+%Variant name: min-5_ld-1--1
+
+solSource(glucolysis).
+pf([r_d1d5d99d1_39, -r_d1d5d99d1_39, r_d1d1d99d8_40, -r_d1d1d99d8_40, m_formate, -m_formate, r_d1d1d99d8_41, -r_d1d1d99d8_41, r_d1d4d99d3_42, -r_d1d4d99d3_42]).
+depthLimit(-1).

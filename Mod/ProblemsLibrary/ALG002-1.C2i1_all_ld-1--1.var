@@ -1,0 +1,6 @@
+%Sol source: ALG002-1.C2i1
+%Variant name: all_ld-1--1
+
+solSource(ALG002-1.C2i1).
+pf([-greater_than_0(_0)]).
+depthLimit(-1).

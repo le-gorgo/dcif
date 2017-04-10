@@ -1,0 +1,7 @@
+problem;distrib;nbAg+;method;root;nbConsequencesFound;total time;CPU time by SOLAR;extensions;inferences;consequences sent;clauses sents;nb Messages;total size messages;max CPU time by SOLAR;max extensions;max inferences;max consequences sent;max clauses sents;max nb Messages;max total size messages;min CPU time by SOLAR;min extensions;min inferences;min consequences sent;min clauses sents;min nb Messages;min total size messages;root-CPU time by SOLAR;root-extensions;root-inferences;root-consequences sent;root-clauses sents;root-nb Messages;root-total size messages
+PUZ012-1.C2i1_all_ld4--1;Mono;1;SOLAR-Inc;0;65;18815;11449;925654;2036878;0;0;0;0;11449;925654;2036878;0;0;0;0;11449;925654;2036878;0;0;0;0;11449;925654;2036878;0;0;0;0
+PUZ012-1.C2i1_all_ld4--1;Mono;1;Solar-Carc;0;65;22328;13785;925654;2036878;0;0;0;0;13785;925654;2036878;0;0;0;0;13785;925654;2036878;0;0;0;0;13785;925654;2036878;0;0;0;0
+PUZ012-1.C2i1_all_ld4--1;Mono;1;Solar;0;65;19041;11627;925654;2036878;0;0;0;0;11627;925654;2036878;0;0;0;0;11627;925654;2036878;0;0;0;0;11627;925654;2036878;0;0;0;0
+PUZ012-1.C2i1_all_ld4--1;_kmet2;2;DICF-PB-NewAsync;0;7;8407;3330;3059;10178;0;0;126;129;1743;1786;5724;0;0;71;73;1587;1273;4454;0;0;55;56;1587;1273;4454;0;0;55;56
+PUZ012-1.C2i1_all_ld4--1;_kmet4;4;DICF-PB-NewAsync;0;0;600511;115;30;114;0;0;1934;1930;62;17;59;0;0;982;981;0;0;0;0;0;13;12;62;13;59;0;0;18;17
+PUZ012-1.C2i1_all_ld4--1;_kmet10;10;DICF-PB-NewAsync;0;9;600904;167504;425005;4843598;0;0;5548;5551;81963;261844;2393940;0;0;1329;1328;0;0;0;0;0;1;0;2546;381;2940;0;0;566;573

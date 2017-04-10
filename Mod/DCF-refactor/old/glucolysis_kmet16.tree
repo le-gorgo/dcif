@@ -1,0 +1,31 @@
+nbAgents(16).
+edge(5,6,[-r_d3d5d1d59_36, m_sarcosine, r_d1d5d99d1_38, -m_sarcosine]).
+edge(7,6,[m_creatinine, -m_urea, c_compoundCurea_sarcosineC, r_d3d5d1d59_36, -m_creatinine, c_compoundCurea_ornithineC, -r_d3d5d2d10_34, -c_compoundCurea_sarcosineC]).
+edge(12,13,[m_citrate, -r_d2d3d3d1_64, r_d1d2d4d1_62, -r_d1d2d4d1_63]).
+edge(14,15,[-m_citrate, -r_d2d6d1d14_55, r_d2d6d1d14_54, r_d2d3d3d1_64, -r_d4d2d1d2_8, r_d4d2d1d2_9, m_citrate]).
+edge(7,3,[-c_compoundCurea_ornithineC, -m_creatine, m_ornithine, c_compoundCurea_ornithineC, -m_ornithine]).
+edge(8,11,[-m_citrate, -r_d2d6d1d14_55, r_d2d6d1d14_54, m_acryloylcoa, -m_acryloylcoa, -r_d1d2d1d31_56, r_d2d3d3d1_64, m_l2aminoadipate]).
+edge(1,10,[-r_d2d1d3d1_50, m_succinate, -m_succinate, -r_d4d2d1d2_8, r_d4d2d1d2_9]).
+edge(3,2,[m_citruline, c_compoundCurea_ornithineC, -m_citruline, -r_d3d5d3d1_26]).
+edge(1,0,[r_d2d1d1d7_20, r_d1d3d99d1_10, m_fumarate, -m_fumarate, -r_d2d1d1d1_18]).
+edge(3,7,[-m_ornithine, m_creatine, c_compoundCurea_ornithineC, m_ornithine, -c_compoundCurea_ornithineC]).
+edge(2,0,[m_citruline, c_compoundCarginine_fumarateC, -m_las, m_las, -c_compoundCarginine_fumarateC, -m_fumarate, -r_d2d1d1d7_20, m_fumarate]).
+edge(9,12,[r_d1d1d1d27_61, m_citrate, -r_d2d3d3d1_64, -r_d1d1d1d27_60]).
+edge(0,1,[m_fumarate, -r_d2d1d1d7_20, r_d2d1d1d1_18, -r_d1d3d99d1_10, -m_fumarate]).
+edge(6,7,[m_creatinine, -r_d3d5d1d59_36, m_urea, c_compoundCurea_sarcosineC, -c_compoundCurea_ornithineC, -c_compoundCurea_sarcosineC, -m_creatinine, r_d3d5d2d10_34]).
+edge(6,5,[-r_d1d5d99d1_38, r_d3d5d1d59_36, m_sarcosine, -m_sarcosine]).
+edge(5,4,[-r_d1d4d99d3_43, c_compoundCformaldehyde_methylamineC, m_formaldehyde, -m_formaldehyde, m_methylamine, -m_methylamine]).
+edge(4,5,[-m_methylamine, -c_compoundCformaldehyde_methylamineC, -m_formaldehyde, r_d1d4d99d3_43, m_formaldehyde, m_methylamine]).
+edge(15,14,[r_d4d2d1d2_8, -r_d2d6d1d14_54, -r_d4d2d1d2_9, -m_citrate, r_d2d6d1d14_55, m_citrate, -r_d2d3d3d1_64]).
+edge(0,2,[-m_las, r_d2d1d1d7_20, -c_compoundCarginine_fumarateC, c_compoundCarginine_fumarateC, m_las, m_fumarate, -m_fumarate, -m_citruline]).
+edge(10,1,[-r_d4d2d1d2_9, m_succinate, r_d2d1d3d1_50, -m_succinate, r_d4d2d1d2_8]).
+edge(10,11,[-m_acryloylcoa, m_acryloylcoa, -r_d2d3d1d61_4, r_d2d3d1d61_5, -r_d4d2d1d2_8, r_d4d2d1d2_9]).
+edge(11,10,[r_d4d2d1d2_8, r_d2d3d1d61_4, m_acryloylcoa, -r_d2d3d1d61_5, -r_d4d2d1d2_9, -m_acryloylcoa]).
+edge(12,9,[-m_citrate, r_d1d1d1d27_60, -r_d1d1d1d27_61, r_d2d3d3d1_64]).
+edge(13,12,[-m_citrate, r_d1d2d4d1_63, -r_d1d2d4d1_62, r_d2d3d3d1_64]).
+edge(11,14,[-m_citrate, r_d1d1d1d42_2, -r_d2d6d1d14_55, r_d2d6d1d14_54, r_d2d3d3d1_64, -r_d4d2d1d2_8, r_d4d2d1d2_9, -r_d1d1d1d42_3]).
+edge(9,8,[-m_citrate, -m_acryloylcoa, m_acryloylcoa, m_betaalanine, -r_d4d1d1d20_53, -m_betaalanine, r_d4d1d1d20_52, r_d2d3d3d1_64]).
+edge(11,8,[-r_d2d6d1d14_54, r_d2d6d1d14_55, m_citrate, -m_l2aminoadipate, -m_acryloylcoa, m_acryloylcoa, r_d1d2d1d31_56, -r_d2d3d3d1_64]).
+edge(8,9,[-r_d2d3d3d1_64, -m_acryloylcoa, m_citrate, -m_betaalanine, r_d4d1d1d20_53, -r_d4d1d1d20_52, m_acryloylcoa, m_betaalanine]).
+edge(14,11,[-r_d2d6d1d14_54, m_citrate, -r_d1d1d1d42_2, -r_d2d3d3d1_64, -r_d4d2d1d2_9, r_d4d2d1d2_8, r_d1d1d1d42_3, r_d2d6d1d14_55]).
+edge(2,3,[-m_citruline, -c_compoundCurea_ornithineC, r_d3d5d3d1_26, m_citruline]).

@@ -1,0 +1,6 @@
+%Sol source: PUZ008-1.C1i2
+%Variant name: all_ld2-4
+
+solSource(PUZ008-1.C1i2).
+pf([+achievable(_0,_1,_2)] <= 2).
+depthLimit(-1).

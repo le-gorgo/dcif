@@ -1,0 +1,11 @@
+nbAgents(6).
+edge(5,3,[r_d1d2d1d31_57, r_d4d2d1d3_7, -r_d4d2d1d2_9, -r_d4d3d1d6_49, r_d4d2d1d2_8, -r_d4d2d1d3_6, r_d4d3d1d6_48, -r_d1d2d1d31_56, r_d2d3d3d1_65, -r_d2d3d3d1_64]).
+edge(2,1,[r_d3d5d3d1_26, -r_d3d5d3d1_28, -r_d6d3d4d5_23, r_d6d3d4d5_22]).
+edge(3,2,[-r_d1d3d99d1_11, m_succinate, -r_d4d2d1d2_9, r_d4d2d1d2_8]).
+edge(1,0,[r_d3d5d2d10_35, -m_sarcosine, m_sarcosine, -r_d3d5d2d10_34]).
+edge(3,5,[r_d2d3d3d1_64, -r_d1d2d1d31_57, r_d4d3d1d6_49, r_d4d2d1d2_9, r_d1d2d1d31_56, r_d4d2d1d3_6, -r_d4d2d1d2_8, -r_d4d2d1d3_7, -r_d4d3d1d6_48, -r_d2d3d3d1_65]).
+edge(1,2,[-r_d6d3d4d5_22, r_d3d5d3d1_28, -r_d3d5d3d1_26, r_d6d3d4d5_23]).
+edge(3,4,[m_acryloylcoa, -r_d2d3d3d1_64, r_d2d3d3d1_65, r_d4d3d1d6_48, -r_d2d1d3d1_50, r_d4d2d1d54_47, -r_d4d3d1d6_49, -m_acryloylcoa]).
+edge(4,3,[r_d2d3d3d1_64, -m_acryloylcoa, m_acryloylcoa, -r_d4d2d1d54_47, r_d4d3d1d6_49, r_d2d1d3d1_50, -r_d4d3d1d6_48, -r_d2d3d3d1_65]).
+edge(2,3,[-m_succinate, -r_d4d2d1d2_8, r_d4d2d1d2_9, r_d1d3d99d1_11]).
+edge(0,1,[m_sarcosine, -r_d3d5d2d10_35, -m_sarcosine, r_d3d5d2d10_34]).
