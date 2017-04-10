@@ -62,8 +62,10 @@ import org.nabelab.solar.equality.TermWeight;
 import org.nabelab.solar.indexing.FVecTrie;
 import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.parser.Parser;
+import org.nabelab.solar.pfield.PFCardConstraint;
 import org.nabelab.solar.pfield.PField;
-import org.nabelab.solar.pfield.PFieldChecker;
+//import org.nabelab.solar.pfield.PFieldChecker;
+import org.nabelab.solar.pfield.PFieldCheckerCardConstraints;
 import org.nabelab.solar.simp.TermIntMap;
 import org.nabelab.solar.util.IntHashSet;
 import org.nabelab.solar.util.Pair;
@@ -1757,8 +1759,9 @@ public class CFP implements ClauseTypes, TermTypes, ExitStatus, OptionTypes, Deb
   /**
    * Initialize the skip-minimality checking.
    * @param out the output of debug messages.
+ * @throws Exception 
    */
-  public void initSkipMinimality(PrintWriter out) throws FileNotFoundException, ParseException {
+  public void initSkipMinimality(PrintWriter out) throws Exception {
     if (!opt.use(USE_SKIP_MINIMALITY) || problemType == REFUTATION)
       return;
 
@@ -1783,7 +1786,7 @@ public class CFP implements ClauseTypes, TermTypes, ExitStatus, OptionTypes, Deb
     if (problemType == CHARACTERISTIC)
       return;
 
-    PFieldChecker checker = PFieldChecker.create(env, opt, pfield);
+    PFieldCheckerCardConstraints checker = PFieldCheckerCardConstraints.createChecker(env, pfield);
     for (Clause c : clauses) {
       if (c.getType() == ClauseTypes.AXIOM)
         if (checker.belongs(c))

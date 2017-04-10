@@ -35,6 +35,9 @@
 
 package org.nabelab.solar.pfield;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.nabelab.solar.PLiteral;
 
 /**
@@ -54,7 +57,33 @@ public class PFieldItem {
     this.maxLenCounter = maxLenCounter;
     if (!pliteral.isSpecial())
       this.numVars = pliteral.getTerm().getNumVars();    
+    this.occu = new PFieldCounter(0);
   }
+  
+  /**
+   * Add a reference to a group counter that this PFieldItem belongs to, so that skipping this literal affects the group constraint
+   * @param groupCounter
+   */
+  public void addToGroup(PFieldCounter groupCounter) {
+	  maxLenGroupCounters.add(groupCounter);
+	  occu.inc();
+
+  }
+  
+  /**
+   * Remove a reference to a group counter
+   * @param groupCounter
+   */
+  public void removeFromGroup(PFieldCounter groupCounter) {
+	  maxLenGroupCounters.remove(groupCounter);
+  }
+  /**
+   * clear references to group counters
+   */
+  public void clearGroups() {
+	  maxLenGroupCounters.clear();
+  }
+  
   
   /**
    * Returns true if this item can be skipped.
@@ -74,6 +103,8 @@ public class PFieldItem {
   public void skip() {
     maxLenCounter.dec();
     counter.dec();
+    for (PFieldCounter ctr:maxLenGroupCounters)
+    	ctr.dec();
   }
 
   /**
@@ -82,6 +113,8 @@ public class PFieldItem {
   public void unskip() {
     maxLenCounter.inc();
     counter.inc();
+    for (PFieldCounter ctr:maxLenGroupCounters)
+    	ctr.inc();
   }
 
   /**
@@ -100,6 +133,14 @@ public class PFieldItem {
     return numVars;
   }
   
+  public int getOcc(){
+	  return occu.get();
+  }
+  
+  public List<PFieldCounter> getMaxLEnGroup(){
+	  return maxLenGroupCounters;
+  }
+  
   /**
    * Returns a string representation of this object.
    * @return a string representation of this object.
@@ -116,5 +157,9 @@ public class PFieldItem {
   private PFieldCounter counter = null;
   /** The counter to check the maximum length */
   private PFieldCounter maxLenCounter = null;
+  /** The counters for group cardinality constraint the literal belongs to */
+  private List<PFieldCounter> maxLenGroupCounters = new ArrayList<PFieldCounter>();
   
+  private PFieldCounter occu = null;
+    
 }

@@ -50,6 +50,7 @@ import org.nabelab.solar.Tableau;
 import org.nabelab.solar.VarTable;
 import org.nabelab.solar.constraint.Constraint;
 import org.nabelab.solar.operator.Operator;
+import org.nabelab.solar.parser.ParseException;
 
 /**
  * @author nabesima
@@ -91,8 +92,9 @@ public class Proof implements OptionTypes {
   /**
    * Returns true if the proof steps are valid.
    * @return true if the proof steps are valid.
+ * @throws Exception 
    */
-  public boolean validate() {
+  public boolean validate() throws Exception {
     // Turn off the skip-minimality.
     boolean skmin = opt.use(USE_SKIP_MINIMALITY);
     opt.set(USE_SKIP_MINIMALITY, false);
@@ -146,7 +148,7 @@ public class Proof implements OptionTypes {
     return true;
   }
 
-  private boolean validate(Tableau tableau, ArrayList<ProofStep> steps) {
+  private boolean validate(Tableau tableau, ArrayList<ProofStep> steps) throws ParseException {
     for (ProofStep step : steps) {
       tableau.stats().incInf();
       // Expands the unit lemma matching.
@@ -174,8 +176,9 @@ public class Proof implements OptionTypes {
   /**
    * Returns the solved tableau.
    * @return the solved tableau.
+ * @throws Exception 
    */
-  public Tableau getSolvedTableau() {
+  public Tableau getSolvedTableau() throws Exception {
     if (solved == null)
       validate();
     return solved;
@@ -184,8 +187,9 @@ public class Proof implements OptionTypes {
   /**
    * Returns the set of used clauses in this proof.
    * @return the set of used clauses in this proof.
+ * @throws Exception 
    */
-  public List<Clause> getUsedClauses() {
+  public List<Clause> getUsedClauses() throws Exception {
     if (usedClauses == null)
       validate();
     return usedClauses;

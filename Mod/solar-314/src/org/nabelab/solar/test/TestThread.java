@@ -188,10 +188,10 @@ public class TestThread {
     Options opt = new Options(env);             // Create the default options.
     opt.parse(args);                            // Analyze the command line arguments.
 
-    ListenerThread listenerThread = new ListenerThread();                                                           // uses different symbol table.
-    //ListenerThread listenerThread = new ListenerThread(new Env(env.getSymTable(), env.getDebug()));               // for sharing same symbol table.
-    SenderThread senderThread = new SenderThread(opt.getCarcFile());                                                // uses different symbol tale.
-    //SenderThread senderThread = new SenderThread(new Env(env.getSymTable(), env.getDebug()), opt.getCarcFile());  // for sharing same symbol table.
+    //ListenerThread listenerThread = new ListenerThread();                                                           // uses different symbol table.
+    ListenerThread listenerThread = new ListenerThread(new Env(env.getSymTable(), env.getDebug()));               // for sharing same symbol table.
+    //SenderThread senderThread = new SenderThread(opt.getCarcFile());                                                // uses different symbol tale.
+    SenderThread senderThread = new SenderThread(new Env(env.getSymTable(), env.getDebug()), opt.getCarcFile());  // for sharing same symbol table.
 
     SOLARThread solarThread = new SOLARThread(env, opt);
 

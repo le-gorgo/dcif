@@ -269,6 +269,7 @@ public class Options implements OptionTypes, DebugTypes {
         }
       }
       else if (op.equals("-div")) {
+    	  //modified here for proper argument processing
         divide = true;
         if (oparg1 != null && oparg1.matches("(-?[0-9]+([.][0-9]+)?)|all|half")) {
           if (oparg1.matches("-?[0-9]+([.][0-9]+)?")) {
@@ -283,20 +284,20 @@ public class Options implements OptionTypes, DebugTypes {
           else
             throw new IllegalArgumentException("-div requires the depth limit N.");
           i++;
-        }
-        if (oparg2 != null && oparg2.charAt(0) != '-') {
-          if (oparg2.matches("[0-9]+"))
-            divMaxSuccs = Integer.parseInt(oparg2);
-          else
-            throw new IllegalArgumentException("2nd arg of -div must be the maximum number of local successes to be stored.");
-          i++;
-        }
-        if (oparg3 != null && oparg3.charAt(0) != '-') {
-          if (oparg2.matches("[0-9]+([.][0-9]+)?"))
-            divCommonRatio = Float.parseFloat(oparg3);
-          else
-            throw new IllegalArgumentException("3nd arg of -div must be the common ratio to assign the maximum number of local success to each operator.");
-          i++;
+          if (oparg2 != null && oparg2.charAt(0) != '-') {
+              if (oparg2.matches("[0-9]+"))
+                divMaxSuccs = Integer.parseInt(oparg2);
+              else
+                throw new IllegalArgumentException("2nd arg of -div must be the maximum number of local successes to be stored.");
+              i++;
+              if (oparg3 != null && oparg3.charAt(0) != '-') {
+                  if (oparg2.matches("[0-9]+([.][0-9]+)?"))
+                    divCommonRatio = Float.parseFloat(oparg3);
+                  else
+                    throw new IllegalArgumentException("3rd arg of -div must be the common ratio to assign the maximum number of local success to each operator.");
+                  i++;
+                }
+            }
         }
       }
       else if (op.equals("-inc"))

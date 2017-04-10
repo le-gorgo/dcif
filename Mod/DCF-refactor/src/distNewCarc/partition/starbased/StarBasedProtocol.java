@@ -110,6 +110,10 @@ public class StarBasedProtocol extends BaseMainProtocol implements CFMessageType
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} // TODO: check that correct pfield is used
+ catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				if(Thread.currentThread().isInterrupted())
 					return;
 				ag.updateListNewCons(newCsq);
@@ -161,6 +165,9 @@ public class StarBasedProtocol extends BaseMainProtocol implements CFMessageType
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 			if(Thread.currentThread().isInterrupted())
 				return;
@@ -179,6 +186,12 @@ public class StarBasedProtocol extends BaseMainProtocol implements CFMessageType
 		protected Collection<Clause> receivedCl=new ArrayList<Clause>();
 		
 		public static boolean verbose = true;
+
+		@Override
+		public void send(Message<?> m) {
+			// TODO Auto-generated method stub
+			
+		}
 
 		
 }

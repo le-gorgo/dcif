@@ -68,15 +68,42 @@ public class Term implements VarHolder, TermTypes {
    * @param offset the variable offset of the term.
    */
   public Term(Env env, int[] name, int[] type, int[] next, int start, int offset) {
-    this.env    = env;
-    this.name   = name;
-    this.type   = type;
-    this.next   = next;
-    this.start  = start;
-    this.offset = offset;
+	  this.env    = env;
+	  this.name   = name;
+	  this.type   = type;
+	  this.next   = next;
+	  this.start  = start;
+	  this.offset = offset;
+	  
   }
 
-  /**
+  public int getDepth() {
+	  int n = -1;
+	  int k = 0;
+	  int d = 0;
+	  for (int i = 0; i<this.type.length; i++){
+		  if(this.type[i]==TermTypes.FUNCTION){
+			  if (n == this.name[i])
+				  k++;
+			  else{
+				  n=this.name[i];
+				  if (d < k)
+					  d = k;
+				  k = 1;
+			  }  
+		  }
+		  else {
+			  n = -1; 
+			  if (d < k)
+				  d = k;
+			  k = 0;
+		  }
+			 
+	  }
+	  return d;
+}
+
+/**
    * Constructs a copy of the specified term.
    * @param term the term.
    */
@@ -1990,5 +2017,25 @@ public class Term implements VarHolder, TermTypes {
   private int start = 0;
   /** The variable offset of the term. */
   private int offset = 0;
+  
+  
+  public boolean contains(Term term) {
+
+	  int k = 0;
+	  for (int i = 0; i<this.type.length; i++){
+		  if(this.type[i]==term.getType(i)){
+			  //if ((term.getName(i) != null) && k>0)
+
+			  if (this.name[i] == term.getName(i))
+				  k++;
+			  else 
+				  return false;
+		  }
+	  }
+	  return true;
+  }
+
+
+
 
 }

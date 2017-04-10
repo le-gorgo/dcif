@@ -241,7 +241,7 @@ public class PbFormula {
 		int kind = ClauseTypes.AXIOM;
 		if(role == "top_clause")
 			kind = ClauseTypes.TOP_CLAUSE;
-		return Clause.parse(env, new Options(env), name, kind, solVersion.getFormula());
+		return Clause.parse(env, new Options(env), solVersion.getName(), kind, solVersion.getFormula());
 	}
 
 	public String toString(){

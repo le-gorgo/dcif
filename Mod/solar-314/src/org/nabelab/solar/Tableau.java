@@ -52,7 +52,9 @@ import org.nabelab.solar.operator.RestartExtensionChecker;
 import org.nabelab.solar.operator.SkipChecker;
 import org.nabelab.solar.operator.StrongContractionChecker;
 import org.nabelab.solar.operator.SymSplitChecker;
+import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.pfield.PFieldChecker;
+import org.nabelab.solar.pfield.PFieldCheckerCardConstraints;
 import org.nabelab.solar.proof.Proof;
 import org.nabelab.solar.util.ArrayQueue;
 import org.nabelab.solar.util.Pair;
@@ -68,8 +70,9 @@ public class Tableau implements Tags, OptionTypes, DebugTypes {
    * @param env   the environment.
    * @param cfp   the consequence finding problem to which this belongs.
    * @param stats the statistics information.
+ * @throws Exception 
    */
-  public Tableau(Env env, CFP cfp, Stats stats) {
+  public Tableau(Env env, CFP cfp, Stats stats) throws Exception {
     this.env   = env;
     this.cfp   = cfp;
     this.opt   = cfp.getOptions();
@@ -102,8 +105,9 @@ public class Tableau implements Tags, OptionTypes, DebugTypes {
     else
       opCheckers.add(new RestartExtensionChecker(env, this));
     if (!cfp.getPField().isEmpty()) {
-      pfChecker = PFieldChecker.create(env, opt, cfp.getPField());
-      opCheckers.add(new SkipChecker(env, this, pfChecker));
+      //pfChecker = PFieldChecker.create(env, opt, cfp.getPField());
+    	pfChecker = PFieldCheckerCardConstraints.createChecker(env, cfp.getPField());
+    	opCheckers.add(new SkipChecker(env, this, pfChecker));
     }
     constraints = new Constraints(env, this);
     appOps      = new AppOps(env, cfp);
@@ -351,8 +355,9 @@ public class Tableau implements Tags, OptionTypes, DebugTypes {
    * Applies the specific operator to this tableau.
    * @param op the operator to be applied.
    * @return true if the application of the operator succeeds.
+ * @throws ParseException 
    */
-  public boolean apply(Operator op) {
+  public boolean apply(Operator op) throws ParseException {
     if (op.apply() == false)
       return false;
     appOps.push(op);

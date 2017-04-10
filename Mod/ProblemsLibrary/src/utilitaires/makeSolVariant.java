@@ -2,6 +2,11 @@ package utilitaires;
 
 import solarInterface.IndepPField;
 import solarInterface.SolProblem;
+
+import org.nabelab.solar.Env;
+import org.nabelab.solar.Options;
+import org.nabelab.solar.pfield.PField;
+
 import cnfPb.CnfReader;
 import cnfPb.PFieldGenerator;
 import cnfPb.VariantProblem;
@@ -25,7 +30,7 @@ public class makeSolVariant {
 		try {
 			SolProblem input=new SolProblem(pbFilename);
 			PFieldGenerator pf= new PFieldGenerator(input);
-			IndepPField varPf;
+			PField varPf;
 			if (method.startsWith("max") || method.startsWith("min")){
 				boolean mostRare=method.startsWith("min");
 				String prop=method.substring(method.indexOf('-')+1);
@@ -37,7 +42,8 @@ public class makeSolVariant {
 			}
 			varPf.setMaxLength(length);
 			String name=method+"_ld"+length+"-"+depth;
-			VariantProblem output = new VariantProblem(pbFilename,varPf, depth, name);
+			Env env = new Env();
+			VariantProblem output = new VariantProblem(env, new Options(env),pbFilename,varPf, depth, name);
 			output.save(outputFilename, replace);
 		} catch (Exception e) {
 			System.err.println("Error.");
@@ -53,6 +59,9 @@ public class makeSolVariant {
 		String method="all";
 		int length=-1;
 		int depth=-1;
+		if (args.length==0)
+			printHelp();
+		
 		while (args[i].startsWith("-")) {
 			if (args[i].startsWith("-method=")){
 				method=args[i].substring(args[i].indexOf("=")+1).trim();

@@ -35,8 +35,9 @@
 
 package org.nabelab.solar.operator;
 
+import java.awt.List;
 import java.util.HashSet;
-
+import java.util.*;
 import org.nabelab.solar.CFP;
 import org.nabelab.solar.Clause;
 import org.nabelab.solar.Env;
@@ -56,6 +57,7 @@ import org.nabelab.solar.constraint.GreaterThan;
 import org.nabelab.solar.constraint.GreaterThanOrEqualTo;
 import org.nabelab.solar.constraint.NotEqual;
 import org.nabelab.solar.equality.TermWeight;
+import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.proof.ExtensionStep;
 import org.nabelab.solar.proof.ProofStep;
 
@@ -80,8 +82,9 @@ public class Extension extends Operator implements TermTypes {
   /**
    * Applies this operator.
    * @return true if the application of this operator succeeds.
+ * @throws ParseException 
    */
-  public boolean apply() {
+  public boolean apply() throws ParseException {
     // Creates a tableau clause.
     PClause pclause = unifiable.getObject();
     clause = Clause.newOffset(pclause.getClause(), unifiable.getOffset());   
@@ -89,7 +92,7 @@ public class Extension extends Operator implements TermTypes {
     // Applies the operator.
     varTable.addVars(clause.getNumVars());
     super.apply();
-    
+		  
     // Moves the extension target literal to the front and Sorts literal ordering.
     if (!clause.isUnit()) {
       for (int i=pclause.getPos(); i > 0; i--)
@@ -295,6 +298,17 @@ public class Extension extends Operator implements TermTypes {
       return false;  
     }
     
+    // check term depth
+    if (!checkTermDepth(clause)){
+    	super.cancel();
+    	varTable.removeVars(clause.getNumVars());
+    	stats.incSuccs(stats.FAIL);
+    	if (env.dbgNow(DBG_TABLEAUX)) {
+    		System.out.println();
+    		System.out.println("FAILED by TermDepth.");
+    	}
+    	return false;
+    }
     // Regularity checking.
     if (opt.use(USE_REGULARITY) && !clause.isUnit()) {
       boolean sameBlock = true;

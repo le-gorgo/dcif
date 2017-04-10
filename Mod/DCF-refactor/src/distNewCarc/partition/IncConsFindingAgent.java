@@ -5,11 +5,14 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
+import org.hamcrest.core.IsInstanceOf;
 import org.nabelab.solar.Clause;
 import org.nabelab.solar.Literal;
 import org.nabelab.solar.PLiteral;
 import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.pfield.PField;
+
+import distNewCarc.partition.newAsynch.NewAsyncProtocol;
 
 import base.BasicTheoryAgent;
 import base.TheoryAgent;
@@ -66,7 +69,7 @@ public class IncConsFindingAgent extends BasicTheoryAgent implements TheoryAgent
 
 
 	
-	public Collection<Clause> computeNewCons(Collection<Clause> newCl) throws ParseException {
+	public Collection<Clause> computeNewCons(Collection<Clause> newCl) throws Exception {
 		if(Thread.currentThread().isInterrupted())
 			return null;
 		CNF result = new CNF();
@@ -98,14 +101,19 @@ public class IncConsFindingAgent extends BasicTheoryAgent implements TheoryAgent
 		SolProblem pb = new SolProblem(getEnv(), getOptions(), axioms, prunedTC, computationPField);
 		pb.setDepthLimit(theory.getDepthLimit());	
 		boolean incremental = false; boolean trueNC = false;
-		CFSolver.solveToClause(pb, -1, stats.getSolarCtrList(), result, incremental, trueNC);
+		if(cAg.gbProtocol instanceof NewAsyncProtocol)
+			CFSolver.solveToClause(pb, -1, stats.getSolarCtrList(), result, incremental, trueNC, this.cAg);
+		else 
+			CFSolver.solveToClause(pb, -1, stats.getSolarCtrList(), result, incremental, trueNC, null);
 		if(Thread.currentThread().isInterrupted())
 			return null;
 		//update receivedCl (after computation in case so that original state is used during it)
 		receivedCl = pruneWith(receivedCl, prunedTC);
 		receivedCl.addAll(prunedTC);
+
 		return result;
 	}
+		
 
 	public PField addReduc(PField base, Collection<Clause> clauses) throws ParseException{
 		List<PLiteral> knownLits = base.getPLiterals();
@@ -212,5 +220,10 @@ public class IncConsFindingAgent extends BasicTheoryAgent implements TheoryAgent
 	protected Collection<Clause> receivedCl = new ArrayList<Clause>();
 	protected PField outputLanguage;
 	protected HashMap<CanalComm, PField> inputLanguages = new HashMap<CanalComm, PField>();
-
+	
+	
+	public void send(Collection<Clause> cl) {
+		send(cl);
+		
+	}
 }

@@ -59,6 +59,7 @@ import org.nabelab.solar.constraint.Disjunction;
 import org.nabelab.solar.constraint.Equal;
 import org.nabelab.solar.constraint.NotEqual;
 import org.nabelab.solar.constraint.NotSubsuming;
+import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.proof.ProofStep;
 import org.nabelab.solar.util.Pair;
 
@@ -97,12 +98,15 @@ public abstract class Operator implements TermTypes, Tags, OptionTypes, DebugTyp
   /**
    * Applies this operator.
    * @return true if the application of this operator succeeds.
+ * @throws ParseException 
    */
-  public boolean apply() {
+  public boolean apply() throws ParseException {
     if (subst != null) {
       state = varTable.state();
       varTable.substitute(subst);
+      
     }
+ 
     node.setInfStep(stats.inf());
     return true;
   }
@@ -435,7 +439,23 @@ public abstract class Operator implements TermTypes, Tags, OptionTypes, DebugTyp
     return true;
   }
 
-  /**
+  public boolean checkTermDepth(Clause c) throws ParseException{
+	  Clause p = c.instantiate();
+	   
+	  for(Literal l : p.getLiterals()){
+		  if(!checkTermDepth(l.getTerm()))
+			  return false;
+
+	  }
+	  return true;
+
+  }
+  protected boolean checkTermDepth(Term term) {
+	  int depth = tableau.getOptions().getDepthLimit();
+	  return (term.getDepth() <= depth);
+  }
+
+/**
    * Converts this operator to the proof step.
    * @return the proof step.
    */

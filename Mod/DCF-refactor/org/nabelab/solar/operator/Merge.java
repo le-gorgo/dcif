@@ -38,6 +38,7 @@ package org.nabelab.solar.operator;
 import org.nabelab.solar.Env;
 import org.nabelab.solar.Node;
 import org.nabelab.solar.Stats;
+import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.proof.MergeStep;
 import org.nabelab.solar.proof.ProofStep;
 
@@ -63,8 +64,9 @@ public class Merge extends Operator {
   /**
    * Applies this operator.
    * @return true if the application of this operator succeeds.
+ * @throws ParseException 
    */
-  public boolean apply() {
+  public boolean apply() throws ParseException {
     super.apply();
     node.addTag(MERGED);
     tableau.stats().inc(Stats.MERGE);

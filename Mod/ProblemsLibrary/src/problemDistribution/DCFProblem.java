@@ -53,7 +53,7 @@ public class DCFProblem implements Parser,Saver, DistributedConsequenceFindingPr
 		load(filenameNoExt);
 	}
 	public void generateFrom(SolProblem source, String distribProgASP, int distribType, int nbAg, double minProportion,
-			double maxProportion) throws IOException{
+			double maxProportion) throws IOException, ParseException{
 		//Given a SolProblem
 		Pair<Integer,Integer> minMax=convertProportion(source, nbAg, minProportion, maxProportion);
 		int minCl=minMax.getLeft();
@@ -210,7 +210,7 @@ public class DCFProblem implements Parser,Saver, DistributedConsequenceFindingPr
 		}
 		//for now, the production field is supposed common.
 		p.println();
-		p.println(IndepPField.toSolFileLine(pf));
+		//p.println(IndepPField.toSolFileLine(pf));
 
 	}
 	

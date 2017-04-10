@@ -2,5 +2,5 @@
 %Variant name: max-4_ld-1--1
 
 solSource(glucolysis).
-pf([m_fumarate, -m_fumarate, m_citrate, -m_citrate, m_formaldehyde, -m_formaldehyde, m_succinate, -m_succinate]).
+pf(([m_citrate, m_glucose]<=3, [+m_fumarate, -m_e2oxoglutarate]<=2),[m_fumarate, -m_fumarate, m_citrate, -m_citrate, m_formaldehyde, -m_formaldehyde, m_succinate, -m_succinate]).
 depthLimit(-1).

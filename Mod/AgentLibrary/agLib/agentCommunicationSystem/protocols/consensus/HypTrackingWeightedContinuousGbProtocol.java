@@ -161,5 +161,9 @@ public class HypTrackingWeightedContinuousGbProtocol<Hypothesis> extends
 	protected List<GlobalWeightedMessage> waitingList;
 	protected double sentWeight;
 	protected ConsensusAgent<Hypothesis> ag;
+	public void send(Message<?> m) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

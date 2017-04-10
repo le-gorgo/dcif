@@ -78,7 +78,7 @@ public class LocalTheory implements ExitStatus, ClauseTypes, TermTypes{
 	public LocalTheory(CFSolver solver, SolProblem cfp, int id) {
 		this.solver=solver;
 		locTheory=new CNF();
-		for (int i=0;i<cfp.getNbClauses();i++){
+		for (int i=0;i<cfp.getNumClauses();i++){
 			locTheory.add(cfp.getClause(i));
 		}
 		manifestations=new UnitClauseCNF();
@@ -500,7 +500,7 @@ public class LocalTheory implements ExitStatus, ClauseTypes, TermTypes{
 	private int solve(List<? extends IndepClause> axioms, List<? extends IndepClause> topClauses, 
 			IndepPField pf,List<StatCounter<Integer>> ctr, List<Conseq> conseqSet) throws ParseException{
 		int status=ExitStatus.SATISFIABLE;
-		List<IndepClause> top=new ArrayList<IndepClause>();
+		List<Clause> top=new ArrayList<Clause>();
 		top.addAll(topClauses);
 		List<IndepClause> base=new ArrayList<IndepClause>();
 		base.addAll(axioms);
@@ -510,7 +510,7 @@ public class LocalTheory implements ExitStatus, ClauseTypes, TermTypes{
 		}
 		//int k=top.size();
 		for (int i=0;i<top.size();i++) {
-			IndepClause cl=top.get(i);
+			Clause cl=top.get(i);
 			Env env=new Env();
 			CFP problem=set_Problem(env,base,CNF.singleCNF(cl),pf);
 			CFSolver.solve(env, problem,depthLimit,-1, ctr);
@@ -598,18 +598,18 @@ public class LocalTheory implements ExitStatus, ClauseTypes, TermTypes{
 	}
 	
 	private CFP set_Problem(Env env,
-			List<? extends IndepClause> axioms, 
-			List<? extends IndepClause> topClauses,
+			List<? extends Clause> axioms, 
+			List<? extends Clause> topClauses,
 			IndepPField pf) throws ParseException{
 		//initialize options and problem 
 		Options opt=new Options(env);
 		opt.setDepthLimit(depthLimit);
 		opt.setUsedClausesOp(true);
 		CFP problem= new CFP(env, opt);
-		for (IndepClause cl : axioms)
-			problem.addClause(cl.toClause(env));
-		for (IndepClause cl : topClauses)
-			problem.addClause(cl.toClause(env,Clause.TOP_CLAUSE));
+		for (Clause cl : axioms)
+			problem.addClause(cl);
+		for (Clause cl : topClauses)
+			problem.addClause(cl);
 //		System.out.println("Parsing pf : "+pf);
 		if (pf!=null) problem.setPField(pf.toPField(env,opt));
 		

@@ -714,4 +714,8 @@ public class Literal implements OptionTypes, DebugTypes {
 
   /** The special literal that represents restarting the computation is required. */
   public final static Literal restart = new Literal();
+
+public void setTerm(Term term2) {
+	replace(term, term2);	
+}
 }

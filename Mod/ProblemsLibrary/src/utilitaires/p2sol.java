@@ -3,6 +3,10 @@
  */
 package utilitaires;
 
+import org.nabelab.solar.Env;
+import org.nabelab.solar.Options;
+import org.nabelab.solar.parser.ParseException;
+
 import solarInterface.SolProblem;
 import tptp.TPTPProblem;
 
@@ -44,7 +48,7 @@ public class p2sol {
 				"and use the vocabulary of negated hypothesis to make the production field");
 	}
 	
-	public static void exec(final String method, final String pbFilename, final String outputFilename, final boolean replace){
+	public static void exec(final String method, final String pbFilename, final String outputFilename, final boolean replace) throws ParseException{
 		String problemFilename=pbFilename.trim();
 		if (problemFilename.endsWith(".p"))
 			problemFilename=problemFilename.substring(0,problemFilename.length()-2);
@@ -56,7 +60,8 @@ public class p2sol {
 			output=output.substring(0,output.length()-4);
 		// load problem.p and convert it to sol problem
 		TPTPProblem sourcePb=new TPTPProblem(problemFilename);
-		SolProblem outputPb=sourcePb.convertToSolProblem(method);
+		Env env = new Env();
+		SolProblem outputPb=sourcePb.convertToSolProblem(env, new Options(env),method);
 		// save output 
 		try {
 			outputPb.save(output,replace);
@@ -94,7 +99,12 @@ public class p2sol {
 		String outputFilename=null;
 		if (args.length>i+1)
 			outputFilename=args[i+1].trim();
-		exec(method,problemFilename, outputFilename, replace);
+		try {
+			exec(method,problemFilename, outputFilename, replace);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -13,11 +13,12 @@ import logicLanguage.IndepClause;
 
 public interface PBICFAgent extends Agent{
 	public Collection<Clause> getAllTopClauses();
-	public Collection<Clause> computeNewCons(Collection<Clause> newCl) throws ParseException;
+	public Collection<Clause> computeNewCons(Collection<Clause> newCl) throws ParseException, Exception;
 	public boolean canResolve(CanalComm target, Clause cl);
 	public boolean isPossibleOutput(Clause cl);
 	public void updateListNewCons(Collection<Clause> newCl);
 	public Collection<Clause> getListConseq();
 	public Env getEnv();
 	public Options getOptions();
+	public void send(Collection<Clause> cl);
 }

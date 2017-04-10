@@ -10,6 +10,7 @@ import java.nio.file.Paths;
 import org.nabelab.solar.Env;
 import org.nabelab.solar.Options;
 import org.nabelab.solar.parser.ParseException;
+import org.nabelab.solar.pfield.PFCardConstraint;
 import org.nabelab.solar.pfield.PField;
 
 import genLib.io.LoaderTool;
@@ -66,6 +67,10 @@ public class VariantProblem implements Saver, Parser{
 			parseSolSource(line);
 		else if (line.startsWith("pf"))
 			variantPField=PField.parse(env, opt, line);
+		else if (line.startsWith("gpf")){
+			line = line.substring(line.indexOf("f")+1).trim();
+			variantPField.addConstraint( PFCardConstraint.parse(env, opt, line));
+		}
 		else if (line.startsWith("depthLimit"))
 			parseDepth(line);
 	}

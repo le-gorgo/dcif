@@ -39,6 +39,7 @@ import org.nabelab.solar.Env;
 import org.nabelab.solar.Node;
 import org.nabelab.solar.Stats;
 import org.nabelab.solar.Subst;
+import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.proof.FactoringStep;
 import org.nabelab.solar.proof.ProofStep;
 
@@ -63,8 +64,9 @@ public class Factoring extends Operator {
   /**
    * Applies this operator.
    * @return true if the application of this operator succeeds.
+ * @throws ParseException 
    */
-  public boolean apply() {
+  public boolean apply() throws ParseException {
     super.apply();
     node.addTag(FACTORED);
     tableau.stats().inc(Stats.FACTORING);

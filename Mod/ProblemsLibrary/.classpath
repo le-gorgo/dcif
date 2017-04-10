@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="../External Libs/jdom.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/solar-314"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/LogicLibrary"/>
+	<classpathentry kind="lib" path="/home/tlati/Project/dcif/EclipseDCF/External Libs/solar.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

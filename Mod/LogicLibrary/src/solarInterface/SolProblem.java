@@ -213,7 +213,7 @@ public class SolProblem extends CFP implements Parser, Saver{
 			addClause(ax);
 		}
 		for(Clause tc:top_clauses){
-			tc.setType(ClauseTypes.AXIOM);
+			tc.setType(ClauseTypes.TOP_CLAUSE);
 			addClause(tc);
 		}
 	}
@@ -461,7 +461,7 @@ public class SolProblem extends CFP implements Parser, Saver{
 	}
 	
 	public void saveConnectionGraph(String filename, boolean replace) throws Exception{
-		CNF theory = CNF.copy((CNF)getClauses());
+		CNF theory = CNF.copy(getClauses());
 		ClauseConnectionNetwork network = new ClauseConnectionNetwork(env, theory);
 		LoaderTool.save(filename, ".gra", network.convertToGraph(), replace);
 	}
@@ -562,4 +562,8 @@ public class SolProblem extends CFP implements Parser, Saver{
 	private Env env;
 	/**The options*/
 	private Options opt;
+	public CNF listClauses() {
+		CNF theory = CNF.copy(getClauses());
+		return theory;
+	}
 }

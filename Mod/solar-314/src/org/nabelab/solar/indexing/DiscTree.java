@@ -46,6 +46,7 @@ import org.nabelab.solar.TermCont;
 import org.nabelab.solar.TermTypes;
 import org.nabelab.solar.Unifiable;
 import org.nabelab.solar.VarTable;
+import org.nabelab.solar.pfield.PFieldItem;
 import org.nabelab.solar.util.ArrayStack;
 import org.nabelab.solar.util.Pair;
 import org.nabelab.util.LightArrayList;
@@ -1206,4 +1207,43 @@ public class DiscTree<E> implements TermTypes {
     private Subst     head = null;
     private SubstList rest = null;
   }
+
+public E containsOtherForm(Literal lit) {
+	// TODO Auto-generated method stub
+		  DiscNode<E> root = lit.isPositive() ? posRoot : negRoot;
+		  Term        term = lit.getTerm();
+		  DiscNode<E> nodeLit = root.findChild(term.getStartName(), term.getStartType());
+		  if (nodeLit != null){
+			  if (lit.isPositive()){
+				  DiscNode<E> node = posRoot.getFirstChild();
+				  if ( nodeLit.equals(node) ){
+					  LightArrayList<E> leaves = node.getLeaves();
+					  while (leaves == null){
+						  node = node.getFirstChild();
+						  leaves = node.getLeaves();
+					  }
+					  return leaves.get(0);
+				  }
+				  else 
+					  return null;
+			  }
+			  else {
+				  DiscNode<E> node = negRoot.getFirstChild();
+				  if ( nodeLit.equals(node) ){
+					  LightArrayList<E> leaves = node.getLeaves();
+					  while (leaves == null){
+						  node = node.getFirstChild();
+						  leaves = node.getLeaves();
+					  }
+					  return leaves.get(0);
+				  }
+				  else 
+					  return null;
+
+			  }
+		  }
+		  else{
+			  return null;
+		  }
+}
 }

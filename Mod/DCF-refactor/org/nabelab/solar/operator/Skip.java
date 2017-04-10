@@ -49,6 +49,7 @@ import org.nabelab.solar.Unifiable;
 import org.nabelab.solar.constraint.Constraint;
 import org.nabelab.solar.constraint.Disjunction;
 import org.nabelab.solar.constraint.NotEqual;
+import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.pfield.PFieldItem;
 import org.nabelab.solar.proof.ProofStep;
 import org.nabelab.solar.proof.SkipStep;
@@ -75,8 +76,9 @@ public class Skip extends Operator implements DebugTypes {
   /**
    * Applies this operator.
    * @return true if the application of this operator succeeds.
+ * @throws ParseException 
    */
-  public boolean apply() {
+  public boolean apply() throws ParseException {
     
     // Applies the operator.
     if (subst != null)
@@ -86,7 +88,18 @@ public class Skip extends Operator implements DebugTypes {
     pfieldItem.skip();
     tableau.addSkippedNode(node);
     stats.incSuccs(Stats.SKIP);
-
+    
+    // check term Depth
+    if(!checkTermDepth(node)){
+    	tableau.removeSkippedNode(node);
+        pfieldItem.unskip();
+        node.removeTag(SKIPPED);
+        super.cancel();
+        if (subst != null)
+          varTable.removeVars(pfieldItem.getNumVars());
+        stats.incSuccs(Stats.SKIP_MINIMALITY);
+        return false;
+    }
     // Constructs constraints for satisfying the skip-regularity.
     if (tableau.getOptions().use(USE_SKIP_REGULARITY)) {
 
@@ -169,7 +182,17 @@ public class Skip extends Operator implements DebugTypes {
     return true;
   }
 
-  /**
+  private boolean checkTermDepth(Node node) {
+	  Node n = node.getRight();
+	  while (n != null){
+		if (!checkTermDepth(n.getLiteral().getTerm()))
+				return false;
+		else n = n.getRight();
+	  }
+	  return true;
+}
+
+/**
    * Cancels this operator.
    */
   public void cancel() {

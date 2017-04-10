@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="/AgentLibrary"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/GeneralLibrary"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/LogicLibrary"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ProblemsLibrary"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/solar-314"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/OldLogicLibrary"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/solar-314"/>
+	<classpathentry kind="src" path="/AgentLibrary"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

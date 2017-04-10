@@ -111,6 +111,9 @@ public class TokenProtocol extends BaseMainProtocol implements CFMessageTypes{
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		if(Thread.currentThread().isInterrupted())
 			return;
@@ -174,6 +177,13 @@ public class TokenProtocol extends BaseMainProtocol implements CFMessageTypes{
 	
 	protected HashMap<Integer,Collection<Clause>> newCsq=new HashMap<Integer,Collection<Clause>>();
 	public static boolean verbose = true;
+
+
+	@Override
+	public void send(Message<?> m) {
+		// TODO Auto-generated method stub
+		
+	}
 
 	
 }

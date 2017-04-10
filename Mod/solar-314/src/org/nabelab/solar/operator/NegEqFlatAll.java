@@ -51,6 +51,7 @@ import org.nabelab.solar.constraint.GreaterThan;
 import org.nabelab.solar.constraint.GreaterThanOrEqualTo;
 import org.nabelab.solar.constraint.NotEqual;
 import org.nabelab.solar.equality.TermWeight;
+import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.proof.ProofStep;
 
 public class NegEqFlatAll extends Operator {
@@ -72,8 +73,9 @@ public class NegEqFlatAll extends Operator {
   /**
    * Applies this operator.
    * @return true if the application of this operator succeeds.
+ * @throws ParseException 
    */
-  public boolean apply() {
+  public boolean apply() throws ParseException {
     varTable.addVars(literals.size() - 1);
     super.apply();
     

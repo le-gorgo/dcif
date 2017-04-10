@@ -49,6 +49,7 @@ import org.nabelab.solar.Unifiable;
 import org.nabelab.solar.constraint.GreaterThan;
 import org.nabelab.solar.constraint.GreaterThanOrEqualTo;
 import org.nabelab.solar.equality.TermWeight;
+import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.proof.ProofStep;
 
 /**
@@ -96,8 +97,9 @@ public class EqExtension extends Operator {
   /**
    * Applies this operator.
    * @return true if the application of this operator succeeds.
+ * @throws ParseException 
    */
-  public boolean apply() {
+  public boolean apply() throws ParseException {
     // Creates a tableau clause.
     PClause pclause = unifiable.getObject();
     clause = Clause.newOffset(pclause.getClause(), unifiable.getOffset());   

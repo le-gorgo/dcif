@@ -44,6 +44,7 @@ import java.util.List;
 
 import org.nabelab.solar.indexing.FVec;
 import org.nabelab.solar.indexing.FVecTrie;
+import org.nabelab.solar.parser.ParseException;
 
 /**
  * A set of consequences.
@@ -82,7 +83,8 @@ public class ConseqSet implements ClauseTypes, DebugTypes, Iterable<Conseq> {
       varTable.addVars(vars);
     else
       vars = 0;
-
+    //GROUPcHECKING
+    
     // Forward subsumption checking.
     Clause subsuming = fvecTrie.findSubsuming(clause.getFVec(false), clause);
     if (subsuming != null) {
@@ -222,8 +224,9 @@ public class ConseqSet implements ClauseTypes, DebugTypes, Iterable<Conseq> {
   /**
    * Returns true if found consequences are valid.
    * @return true if found consequences are valid.
+ * @throws Exception 
    */
-  public boolean validate() {
+  public boolean validate() throws Exception {
     boolean valid = true;
     for (Clause clause : fvecTrie.getClauses()) {
       if (clause instanceof Conseq) {

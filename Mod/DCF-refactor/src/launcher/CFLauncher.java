@@ -32,6 +32,7 @@ import agLib.agentCommunicationSystem.CanalComm;
 import cnfPb.VariantProblem;
 import distNewCarc.partition.IncConsFindingAgent;
 import distNewCarc.partition.asynchronous.PBAsyncIncConsFinding;
+import distNewCarc.partition.newAsynch.PBNewAsyncIncConsFinding;
 import distNewCarc.partition.starbased.PBStarIncConsFinding;
 import distNewCarc.partition.tokenbased.PBTokenIncConsFinding;
 
@@ -45,6 +46,7 @@ public class CFLauncher {
 	public static final int DICF_ASYNC=0;
 	public static final int DICF_STAR=1;
 	public static final int DICF_TOKEN=2;
+	public static final int DICF_NewASYNC=3;
 
 
 	public static DistributedConsequenceFindingProblem<SolProblem> setProblem(String problemRad, String variantSuffix, String distribSuffix) throws Exception{
@@ -58,7 +60,39 @@ public class CFLauncher {
 		}
 		return dcf;	
 	}
+	
+	public static ExpeSummary partitionBasedNewAsyncIncCF(DistributedConsequenceFindingProblem<SolProblem> problem,
+			String pbName, String distribSuffix, String method, boolean useNC, boolean pruneCsq, long deadline, String outputCsqFilename) throws Exception{
+		long start = System.currentTimeMillis();
+		PBNewAsyncIncConsFinding pb=new PBNewAsyncIncConsFinding(problem, useNC, pruneCsq, deadline);
+		long middle = System.currentTimeMillis();
+		boolean finished = pb.startExpe(deadline);
+		
+		long end = System.currentTimeMillis();
+		// print some outpur
+		Collection<Clause> consequences=pb.getOutput();
+		System.out.println(""+consequences.size()+" (NEW) CHARACTERISTIC CLAUSES");
+		System.out.println();
+		for (Clause c:consequences){
+			System.out.println(c);
+		}
+		System.out.println();
+		System.out.println("Total execution time was " + (end - start) + " ms.\n");
+		System.out.println("Execution time was " + (end - middle) + " ms.\n");
+		if(!finished)
+			System.out.println("---System Timeout---");
 
+		System.out.println("DCIF PROBLEM NewASYNC");
+
+		// set result line
+		List<ConsFindingAgentStats> agStats=pb.getAllStats();
+		ExpeSummary result=new ExpeSummary(pbName, distribSuffix, 0,method, end-start, consequences.size(),agStats);
+
+		//ouput in csq file for checking results
+		String stats = ExpeSummary.labels() + "\n" + result.toLine()+"\n";		
+		saveConsequences(consequences,outputCsqFilename,!finished,stats);
+		return result;
+	}	
 
 	public static ExpeSummary partitionBasedAsyncIncCF(DistributedConsequenceFindingProblem<SolProblem> problem,
 			String pbName, String distribSuffix, String method, boolean useNC, boolean pruneCsq, long deadline, String outputCsqFilename) throws Exception{
@@ -223,7 +257,7 @@ public class CFLauncher {
 		ConsFindingAgentStats stat=new ConsFindingAgentStats();
 		Collection<Clause> resultingCons=new ArrayList<Clause>();
 		long middle = System.currentTimeMillis();
-		int status = CFSolver.solveToClause(pb, deadline, stat.getSolarCtrList(), resultingCons, incremental, trueNewC);
+		int status = CFSolver.solveToClause(pb, deadline, stat.getSolarCtrList(), resultingCons, incremental, trueNewC, null);
 		long end = System.currentTimeMillis();
 		if (incremental){
 			CNF reducedCons=new CNF();
@@ -290,6 +324,7 @@ public class CFLauncher {
 				System.out.println("------------------  TIME OUT --------------------");
 			}
 		}
+		else
 		if (methodOptions.get(0).equalsIgnoreCase("DICF")){
 			//If the method is Distributed Incremental Consequence Finding
 			DistributedConsequenceFindingProblem<SolProblem> problem=setProblem(pbBaseName, variantSuffix, distributionSuffix);	//Set the problem
@@ -304,6 +339,8 @@ public class CFLauncher {
 					pbMethod=DICF_TOKEN;
 				if (methodOptions.get(2).equalsIgnoreCase("Async"))
 					pbMethod=DICF_ASYNC;
+				if (methodOptions.get(2).equalsIgnoreCase("NewAsync"))
+					pbMethod=DICF_NewASYNC;
 				//param heuristic and other optional param
 				String pHeuristic=null;//"FixedRoot-0";
 				if (methodOptions.size()>3){
@@ -324,13 +361,17 @@ public class CFLauncher {
 						}
 						i++;
 					}
-					pHeuristic=method.substring(method.lastIndexOf(methodOptions.get(i)));
+					if (hasParamHeuristic)
+						pHeuristic=method.substring(method.lastIndexOf(methodOptions.get(i)));
 				}
 				//RUN
 				if (timeLimitMillis!=-1) deadline=System.currentTimeMillis()+timeLimitMillis;
 				switch(pbMethod){
 				case DICF_ASYNC:
 					result=partitionBasedAsyncIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, useNC, pruneCsq, deadline, outputCsqFilename);
+					break;
+				case DICF_NewASYNC:
+					result=partitionBasedNewAsyncIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, useNC, pruneCsq, deadline, outputCsqFilename);
 					break;
 				case DICF_STAR:
 					result=partitionBasedStarIncCF(problem,pbBaseName+variantSuffix, distributionSuffix, method, pHeuristic, useNC, pruneCsq, deadline, outputCsqFilename);
@@ -479,6 +520,13 @@ public class CFLauncher {
 			if (args[i].startsWith("-csq=")){
 				//Sets output file for consequences
 				outputCsqFilename=args[i].substring(args[i].indexOf("=")+1).trim();
+				i++;
+
+				continue;
+			}
+			if (args[i].startsWith("-depth")){
+				//Sets the term Depths checker to true
+				CFSolver.depthterm = true;
 				i++;
 				continue;
 			}

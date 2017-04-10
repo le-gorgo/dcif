@@ -27,7 +27,7 @@ public class graph2dcf {
 		boolean replace=true;
 			// Options
 		while (args[i].startsWith("-")) { i++; }
-		if (args.length<=i+2){
+		if (args.length<i+2){
 			printHelp();
 			return;
 		}

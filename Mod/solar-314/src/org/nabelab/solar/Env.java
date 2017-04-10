@@ -70,7 +70,7 @@ public class Env implements Debuggable, DebugTypes {
       debug[i] = false;
   }
 
-  /*
+  /**
    * Constructs a environment with a new variable table.
    * @param symTable  a symbol table
    * @param debug     a debug information.
@@ -437,7 +437,15 @@ public class Env implements Debuggable, DebugTypes {
     dbgInterval = interval;
   }
 
-  /** The statistics information. */
+  public boolean isDepthTerm() {
+	return depthTerm;
+}
+
+public void setDepthTerm(boolean depthTerm) {
+	this.depthTerm = depthTerm;
+}
+
+/** The statistics information. */
   private Stats stats = null;
 
   /** The variable table. */
@@ -500,5 +508,6 @@ public class Env implements Debuggable, DebugTypes {
   private long dbgEnd = Long.MAX_VALUE;
   /** The interval for printing the debugging period. */
   private long dbgInterval = 1;
+  private boolean depthTerm = false;
 
 }

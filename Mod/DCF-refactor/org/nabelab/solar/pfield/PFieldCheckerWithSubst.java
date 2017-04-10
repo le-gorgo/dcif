@@ -109,8 +109,10 @@ public class PFieldCheckerWithSubst extends PFieldChecker implements TermTypes {
         negatives[name] = item; 
         break;
       case PLiteral.BOTH:        // Shares the same item.
-        positives[name] = item;
-        negatives[name] = item; 
+    	PLiteral plitPos = new PLiteral(PLiteral.POS, plit.getTerm());
+    	PLiteral plitNeg = new PLiteral(PLiteral.NEG, plit.getTerm());
+        positives[name] = new PFieldItem(plitPos, maxLenCounter);
+        negatives[name] = new PFieldItem(plitNeg, maxLenCounter); 
         break;
       default:
         assert(false);
@@ -195,10 +197,10 @@ public class PFieldCheckerWithSubst extends PFieldChecker implements TermTypes {
   }
 
   /** The allowed number of positive literals. */
-  private PFieldItem[] positives = null;
+  protected PFieldItem[] positives = null;
   /** The allowed number of negative literals. */
-  private PFieldItem[] negatives = null;
+  protected PFieldItem[] negatives = null;
   /** The items of a production field. */
-  private DiscTree<PFieldItem> pfieldItems = null;
+  protected DiscTree<PFieldItem> pfieldItems = null;
 
 }

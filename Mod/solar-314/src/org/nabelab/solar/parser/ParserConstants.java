@@ -92,6 +92,8 @@ public interface ParserConstants {
   int NOT = 30;
   /** RegularExpression Id. */
   int FILENAME = 31;
+  
+  int CARD_CONSTRAINT = 50; 
 
   /** Lexical state. */
   int DEFAULT = 0;

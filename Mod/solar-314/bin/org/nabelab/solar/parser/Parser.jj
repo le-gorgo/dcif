@@ -219,6 +219,7 @@ TOKEN : /* RESERVED WORDS */
 | <ALL_NEG:                         "NEG"                     >
 | <CONSEQ:                          "conseq"                  >
 | <USED:                            "used"                    >
+| <CARD_CONSTRAINT:             	"Gpf" | "card_constraint" >
 }
 
 // NOTE: It is not allowed to use the reserved words as names of predicates, functions or constants. 

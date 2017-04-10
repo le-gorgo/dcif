@@ -39,6 +39,7 @@ import org.nabelab.solar.Env;
 import org.nabelab.solar.Literal;
 import org.nabelab.solar.Node;
 import org.nabelab.solar.Stats;
+import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.proof.IdenticalCReductionStep;
 import org.nabelab.solar.proof.ProofStep;
 
@@ -65,8 +66,9 @@ public class IdenticalCReduction extends Operator {
   /**
    * Applies this operator.
    * @return true if the application of this operator succeeds.
+ * @throws ParseException 
    */
-  public boolean apply() {
+  public boolean apply() throws ParseException {
     super.apply();
     node.setReductionTarget(holder);
     node.addTag(IDENTICAL_C_REDUCED);

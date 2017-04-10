@@ -22,4 +22,9 @@ public class EmptyMainProtocol extends BaseMainProtocol {
 	public void initProtocol() {
 	}
 
+	public void send(Message<?> m) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

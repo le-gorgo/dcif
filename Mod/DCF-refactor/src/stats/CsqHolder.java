@@ -45,7 +45,7 @@ public class CsqHolder implements Parser, Saver {
 	public void setStats(String s){
 		this.stats = s;
 	}
-	@Override
+	//@Override
 	public void parse(BufferedReader bIn) throws IOException{
 		String line=LoaderTool.getNextLine(bIn, '%');
 		while (line!=null){
@@ -111,7 +111,7 @@ public class CsqHolder implements Parser, Saver {
 		LoaderTool.save(filename, ".csq", this, replace);
 	}
 	
-	@Override
+	//@Override
 	public void save(PrintStream p){
 		printHeader(p);
 		for(Clause cl:getClauses()){

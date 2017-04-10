@@ -134,6 +134,7 @@ public class VarTable implements TermTypes {
       else
         nvals(-var, g.getVal(i));
       substitutions.push(var);
+      
     }
   }
   

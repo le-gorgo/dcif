@@ -203,7 +203,7 @@ public class Clause implements VarHolder, ClauseTypes, TermTypes, DebugTypes, It
    */
   public static Clause parse(Env env, Options opt, String name, int type, String clause) throws ParseException {
     List<Literal> literals = new Parser(env, opt).literals(new BufferedReader(new StringReader(clause)));
-    return new Clause(env, literals);
+    return new Clause(env, name, type,literals);
   }
 
   /**

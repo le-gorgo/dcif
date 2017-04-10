@@ -1,7 +1,12 @@
 package utilitaires;
 
+import org.nabelab.solar.Env;
+import org.nabelab.solar.Options;
+import org.nabelab.solar.pfield.PField;
+
 import cnfPb.CnfReader;
 import cnfPb.PFieldGenerator;
+import solarInterface.IndepPField;
 import solarInterface.SolProblem;
 
 public class cnfsat2sol {
@@ -31,7 +36,8 @@ public class cnfsat2sol {
 			SolProblem outputPb=new SolProblem();
 			outputPb.addAxioms(source.getProblem());
 			PFieldGenerator pf= new PFieldGenerator(outputPb);
-			outputPb.setPField(pf.setGlobalPField());
+			PField p = pf.setGlobalPField();
+			outputPb.setPField(p);
 			outputPb.save(output,replace);
 		} catch (Exception e) {
 			System.err.println("Error.");

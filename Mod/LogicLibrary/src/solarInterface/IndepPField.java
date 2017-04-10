@@ -15,10 +15,12 @@ import org.nabelab.solar.Literal;
 import org.nabelab.solar.Options;
 import org.nabelab.solar.PLiteral;
 import org.nabelab.solar.parser.ParseException;
+import org.nabelab.solar.pfield.PFCardConstraint;
 import org.nabelab.solar.pfield.PField;
 
 import genLib.tools.Pair;
 import genLib.tools.ToolIndex;
+
 
 
 public class IndepPField {
@@ -236,6 +238,9 @@ public class IndepPField {
 		PField newpf = createPField(env, opt, pf.getPLiterals());
 		newpf.setMaxLength(pf.getMaxLength());
 		newpf.setMaxTermDepth(pf.getMaxTermDepth());
+		if (pf.getAddConstraints() != null)
+			for (PFCardConstraint constraint : pf.getAddConstraints())
+				newpf.addConstraint(constraint);
 		return newpf;
 	}
 	
@@ -497,6 +502,10 @@ public class IndepPField {
 		PField add = copyPField(env, opt, other);
 		constrainAllLocalWith(add, add);
 		IndepPField.addPLiterals(res, add.getPLiterals());
+		for(PFCardConstraint csr : add.getAddConstraints()){
+			res.addConstraint(csr);
+		}
+
 		return res;
 		//return res.addToLiterals(other.getLiterals(),
 			//	other.constrainAllLocalWith(other.globalConditions).localConditions);
@@ -528,8 +537,8 @@ public class IndepPField {
 		else
 			pf= createPField(env, opt, CNF.getVocabulary(env, clauses));
 		
-		for (Clause cl:clauses)
-			pf = IndepPField.fitConditionsToClause(pf, cl, negated);
+		/*for (Clause cl:clauses)
+			pf = IndepPField.fitConditionsToClause(pf, cl, negated);*/
 		return pf;
 	}
 	
@@ -548,9 +557,9 @@ public class IndepPField {
 				localConds.add(litCond);
 		}
 		if (cl.getLiterals().size()>maxSize)
-			return new IndepPField(literals,localConds,
+			return new PField(literals,localConds,
 					new PFCond(globalConditions.maxDepth,maxSize));
-		return new IndepPField(literals,localConds, globalConditions);
+		return new PField(literals,localConds, globalConditions);
 	}
 	
 	public static boolean belongsTo(Env env, PField pf, Clause cl) throws ParseException{
@@ -567,7 +576,7 @@ public class IndepPField {
 		for (i=0; i<occurences.length; i++)
 			occurences[i]=0;
 		for (Literal lit:cl.getLiterals()){
-			int ind = pf.getPLiterals().indexOf(toPLiteral(IndepLiteral.getFreedLiteral(env, opt, lit)));
+			int ind = pf.getPLiterals().indexOf(toPLiteral(IndepLiteral.getFreedLiteral(env, opt, lit), pf.getMaxTermDepth(), pf.getMaxLength()));
 			if (ind>=0){
 				occurences[ind]++;
 				int mlength = pf.getPLiterals().get(ind).getMaxLength();
@@ -747,7 +756,7 @@ public class IndepPField {
 	
 	//protected List<IndepLiteral> literals=new ArrayList<IndepLiteral>();
 	
-	//protected List<PFCond> localConditions=new ArrayList<PFCond>();
+	protected List<PFCond> localConditions=new ArrayList<PFCond>();
 	
 	//protected PFCond globalConditions=new PFCond();
 	

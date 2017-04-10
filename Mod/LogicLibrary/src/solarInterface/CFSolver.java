@@ -14,10 +14,14 @@ import org.nabelab.solar.Conseq;
 import org.nabelab.solar.Env;
 import org.nabelab.solar.ExitStatus;
 import org.nabelab.solar.SOLAR;
+import org.nabelab.solar.SolarDistr;
 import org.nabelab.solar.Strategy;
 import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.pfield.PField;
 
+
+
+import agLib.agentCommunicationSystem.CommunicationModule;
 import agLib.masStats.StatCounter;
 
 
@@ -28,12 +32,13 @@ public class CFSolver {
 	public static final int SOLST_CPU_TIME=-1;
 	public static final int SOLST_INF=-2;
 
-	public static int solveToClause(SolProblem pb, long deadline, List<StatCounter<Integer>> ctr, 
-			Collection<Clause> resultingCons, boolean incremental, boolean trueNewC) throws ParseException{
+	public static <IncConsFindingAgent> int solveToClause(SolProblem pb, long deadline, List<StatCounter<Integer>> ctr, 
+			Collection<Clause> resultingCons, boolean incremental, boolean trueNewC, CommunicationModule cAg) throws Exception{
 		if(Thread.currentThread().isInterrupted())
 			return ExitStatus.UNKNOWN;
 		List<Conseq> tempRes=new ArrayList<Conseq>();
 		int status;
+		pb.getEnv().setDepthTerm(depthterm);
 		if (!incremental){
 			if(verbose){
 				System.out.println("Starting SolveToClause...");
@@ -45,7 +50,8 @@ public class CFSolver {
 			//for(Clause cl:pb.getClauses())
 			//	newpb.addClause(Clause.parse(newpb.getEnv(), newpb.getOptions(), cl.toString()));
 			//newpb.setPField(PField.parse(newpb.getEnv(), newpb.getOptions(), "pf("+pb.getPField().toString()+")."));
-			solve(pb.getEnv(), pb, pb.getDepthLimit(),deadline, ctr);
+			
+			solve(pb.getEnv(), pb, pb.getDepthLimit(),deadline, ctr, cAg);
 			if(Thread.currentThread().isInterrupted())
 				return ExitStatus.UNKNOWN;
 		//	problem.getConseqSet().validate();
@@ -77,7 +83,7 @@ public class CFSolver {
 	}
 	
 	public static int incSolve(SolProblem pb, long deadline, List<StatCounter<Integer>> ctr, 
-			Collection<Conseq> resultingCons){
+			Collection<Conseq> resultingCons) throws Exception{
 		int status=ExitStatus.SATISFIABLE;
 		List<Clause> top = pb.getTopClauses();
 		List<Clause> base = pb.getAxioms();
@@ -91,7 +97,7 @@ public class CFSolver {
 				return ExitStatus.UNKNOWN;
 			Clause cl=top.get(i);
 			SolProblem problem = new SolProblem(pb.getEnv(), base, CNF.singleCNF(cl), pb.getPField());
-			solve(pb.getEnv(), problem, pb.getDepthLimit(), deadline, ctr);
+			solve(pb.getEnv(), problem, pb.getDepthLimit(), deadline, ctr, null);
 			problem.getConseqSet().validate();
 			
 			List<Conseq> tempRes=problem.getConseqSet().get();
@@ -164,7 +170,7 @@ public class CFSolver {
 		
 		SolProblem problem = new SolProblem(env, axioms, topClauses);
 		
-		solve(env, problem, depthLimit, deadline, ctr);
+		solve(env, problem, depthLimit, deadline, ctr, null);
 		
 		return (problem.getStatus()==ExitStatus.UNSATISFIABLE);
 	}
@@ -173,8 +179,9 @@ public class CFSolver {
 	
 	
 	
-	public static void solve(Env env, CFP problem, int depthLimit, long deadline, List<StatCounter<Integer>> statCtr){
-		SOLAR s;
+	public static void solve(Env env, CFP problem, int depthLimit, long deadline, List<StatCounter<Integer>> statCtr, CommunicationModule cAg){
+		SolarDistr s;
+		
 		long timeLimit= (deadline- System.currentTimeMillis());
 		if (deadline!=-1){
 			if (timeLimit<0)
@@ -200,7 +207,7 @@ public class CFSolver {
 		if(Thread.currentThread().isInterrupted())
 			return;
 		if (verbose) System.out.println(">>>>>>>>>>>> Solving at depth : "+depthLimit+"( real "+problem.getOptions().getDepthLimit()+")");
-		s = new SOLAR(env, problem);          // Create a SOLAR system.
+		s = new SolarDistr(env, problem);
 		List<Long> measures=new ArrayList<Long>();
 		if (statCtr!=null)
 			for (StatCounter<Integer> ctr:statCtr){
@@ -210,10 +217,13 @@ public class CFSolver {
 		//for(int i = 0; i < env.getDebug().length; i++)
 			//env.getDebug()[i] = false;
 		try {
-			s.solve();
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (ParseException e) {
+			if(cAg!=null){
+				s.solve(cAg);
+				
+			}
+			else s.solve();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if(Thread.currentThread().isInterrupted())
@@ -244,6 +254,7 @@ public class CFSolver {
 	
 	public static boolean verbose=true;
 	public static int lengthLimit=-1;
+	public static boolean depthterm=false;
 	
 	
 }

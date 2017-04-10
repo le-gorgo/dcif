@@ -46,7 +46,7 @@ public class AsyncProtocol extends BaseMainProtocol implements CFMessageTypes{
 	}
 
 	@Override
-	public void receiveMessage(Message<?> m) {
+	public void receiveMessage(Message<?> m) throws Exception {
 		if (m instanceof CFMessage){
 			switch(m.getCode()){
 			case PBM_SEND_CLAUSES:
@@ -75,7 +75,7 @@ public class AsyncProtocol extends BaseMainProtocol implements CFMessageTypes{
 	
 	
 	
-	protected void receiveCl(Collection<Clause> sentCl){
+	protected void receiveCl(Collection<Clause> sentCl) throws Exception{
 		if(Thread.currentThread().isInterrupted())
 			return;
 		ag.setDormant(false);
@@ -137,6 +137,12 @@ public class AsyncProtocol extends BaseMainProtocol implements CFMessageTypes{
 	protected CanalComm output;
 	
 	public static boolean verbose = true;
+
+	@Override
+	public void send(Message<?> m) {
+		// TODO Auto-generated method stub
+		
+	}
 
 	
 }

@@ -70,7 +70,7 @@ public class Env implements Debuggable, DebugTypes {
       debug[i] = false;
   }
 
-  /*
+  /**
    * Constructs a environment with a new variable table.
    * @param symTable  a symbol table
    * @param debug     a debug information.

@@ -3,6 +3,9 @@ package utilitaires;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.nabelab.solar.Env;
+import org.nabelab.solar.Options;
+
 import solarInterface.SolProblem;
 import tptp.TPTPProblem;
 
@@ -54,7 +57,8 @@ public class batchp2sol {
 		try {
 			for (String method:methods){
 				System.out.print("Converting into "+filename+" with method "+method+"...");
-				SolProblem outputPb=sourcePb.convertToSolProblem(method);
+				Env env = new Env();
+				SolProblem outputPb=sourcePb.convertToSolProblem(env, new Options(env),method);
 				System.out.print("writing "+filename+"."+method+".sol ...");
 				outputPb.save(filename+"."+method,replace);
 				System.out.println("Done.");

@@ -46,6 +46,7 @@ import org.nabelab.solar.Term;
 import org.nabelab.solar.constraint.GreaterThan;
 import org.nabelab.solar.constraint.GreaterThanOrEqualTo;
 import org.nabelab.solar.equality.TermWeight;
+import org.nabelab.solar.parser.ParseException;
 import org.nabelab.solar.proof.ProofStep;
 import org.nabelab.solar.proof.StartStep;
 
@@ -82,8 +83,9 @@ public class RootExtension extends Operator {
   /**
    * Applies this operator.
    * @return true if the application of this operator succeeds.
+ * @throws ParseException 
    */
-  public boolean apply() {
+  public boolean apply() throws ParseException {
     // Creates a tableau clause.
     topClause = Clause.newOffset(topClause, offset);
     // Applies the operator.
